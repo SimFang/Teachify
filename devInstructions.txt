@@ -1,5 +1,5 @@
 1. Start the react development server : 
-    - cd FrontWebsite
+    - cd ReactWebsite
     - npm run dev
     => http://127.0.0.1:5173/
 2. Start the BACKEND SERVER : 

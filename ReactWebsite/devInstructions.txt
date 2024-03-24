@@ -1,0 +1,10 @@
+1. Start the react development server : 
+    - cd FrontWebsite
+    - npm run dev
+    => http://127.0.0.1:5173/
+2. Start the BACKEND SERVER : 
+    - FlaskServer 
+    - python router.py
+3. Start the CSS Model (SASS):
+    - get into src file 
+    - sass --watch stylesheet/style.scss index.css

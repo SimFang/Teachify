@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+@font-face {
+    font-family: BakBakOne;
+    src: url(./assets/BakbakOne-Regular.ttf);
+  }
+@font-face {
+    font-family : Roboto;
+    src : url(./assets/Roboto-Regular.ttf)
+}
+@font-face {
+  font-family : Inter;
+  src : url(./assets/Inter-VariableFont_slnt,wght.ttf)
+}
+$space-around : 20vw;
+$mid-space : 60vw;
+
+$blue-7 : #ABC4FF;
+$blue-6 : #B6CCFE;
+$blue-5 : #C1D3FE;
+$blue-4 : #CCDBFD;
+$blue-3 : #D7E3FC;
+$blue-2 : #E2EAFC;
+$blue-1 : #EDF2FB;
+
+$black : #2C3038;
+
+$fontsize-1 : 0.75em;
+$fontsize-2 : 1em;
+$fontsize-3 : 1.333em ;
+$fontsize-4 : 2.1em ;
+$fontsize-5 : 3.157em ; 
+
+$boldfont : "BakBakOne";
+$titlefont : "Inter";
+$lightfont : "Roboto";
+
+$normalLetterSpacing : 3px;
+
+
+.blue1 {
+  color : $blue-1
+}
+.blue2 {
+  color : $blue-2
+}
+.blue3 {
+  color : $blue-3
+}
+.blue4 {
+  color : $blue-4
+}
+.blue5 {
+  color : $blue-5
+}
+.blue6 {
+  color : $blue-6;
+}
+.blue7 {
+  color : $blue-7
+}
+
+.button {
+  background-color: $black;
+  height: 3em;
+  color : white;
+  border-radius: 15px;
+  font-family: $boldfont;
+  padding: 0.5em 3em 0.5em 3em;
+  transition : ease all 300ms;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  background-color: $blue-1;
+  height: fit-content;
+  padding: 0.7em;
+  border-radius: 15px;
+  z-index: 2;
+}
+.input {
+  resize: vertical; /* Allow vertical resizing */
+  height: 3em;
+  width: 100%;
+  background-color:  inherit;
+  border: none;
+  font-family: $boldfont;
+  font-size: $fontsize-2;
+  letter-spacing: $normalLetterSpacing;
+  transition: height ease 300ms;
+  &.courseInput{
+    height: 12em;
+  }
+}
+
+.nametag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue-5;
+  color :white;
+  width: 10em;
+  transform: rotate(20deg);
+  border-radius: 20px;
+
+}
+
+.spaced {
+  margin-left: $space-around;
+  margin-right: $space-around;
+}
+
+.structure {
+  display: flex;
+  justify-content: space-between;
+  .structureleft {
+    margin-right: 5vw;
+  }
+}
+
+.line {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content : center;
+  div {
+    position: absolute;
+    top: -110px;
+    width: $mid-space;
+    height: 100px;
+    border-bottom: #2C3038 2px solid;
+
+  }
+}
+.courseline {
+  border-bottom: black 1px solid;
+}
+
+/*The code below is only for quote */
+.quote {
+  padding-left: 1vw;
+  font-weight: bolder;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid $black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+    typing 9s steps(40, end) infinite,
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $black; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $black; }
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The slide Down animation effect */
+
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideRight{
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.slideDown {
+  animation: slideDown ease 1 200ms ;
+}
+.slideRight {
+  animation: slideDown ease 1 200ms ;
+}
+
+
+

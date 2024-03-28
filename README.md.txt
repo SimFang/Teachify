@@ -4,26 +4,6 @@ Description concise du projet.
 
 ## Installation
 
-1. Clonez le référentiel : `git clone https://github.com/votreutilisateur/votreprojet2
-
-Rendez-vous sur dans le dosser /Teachify-main 
-Installer les dependencies :
----- faut installer requirements.txt
-lancer le serveur : 
-python FlaskServer/router.py
-
-Installer les dependcies node : 
-cd ReactWebsite
-taper npm install 
-
-ensuite lancer le serveru 
-npm run dev 
-
-Mettre le dossier .env dans /FlaskServer
-remplir avec les codes donnés 
-
-## Installation
-
 1. Clonez le référentiel :
 git clone https://github.com/votreutilisateur/votreprojet2
 

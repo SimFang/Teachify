@@ -1,4 +1,4 @@
-# Nom du Projet
+# TEACHIFY
 
 Description concise du projet.
 

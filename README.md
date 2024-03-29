@@ -29,15 +29,15 @@ npm run dev
 Pour démarrer l'application, cliquez sur le l'url proposé dans le terminal du serveur React.
 Fortement probable que cela soit : http://localhost:5173/
 
-##Auteurs
+## Auteurs
 FANG Simon
 Marwan BOUZOUBAA
 Madis ROOSMA
 
-##Licence
+## Licence
 Ce projet est sous licence MIT.
 
-##Contact
+## Contact
 Pour toute question ou commentaire, contactez-nous à l'adresse teachify.ai@gmail.com.
 
 

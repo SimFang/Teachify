@@ -22,11 +22,12 @@ npm install
 6. Ensuite, lancez le serveur en exécutant la commande :
 npm run dev
 
-7. Placez le fichier `.env` dans le répertoire `/FlaskServer` et remplissez-le avec les codes fournis.
+7. Placez le fichier `.envsample` dans le répertoire `/FlaskServer`, renommez le '.env' et remplissez-le avec les codes fournis.
 
 ## Utilisation
 
-Pour démarrer l'application, cliquez sur le lien proposé dans le terminal du serveur React.
+Pour démarrer l'application, cliquez sur le l'url proposé dans le terminal du serveur React.
+Fortement probable que cela soit : http://localhost:5173/
 
 ##Auteurs
 FANG Simon

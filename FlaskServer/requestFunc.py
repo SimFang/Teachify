@@ -253,12 +253,12 @@ def QCMpart(input, inputForm, language, difficulty) :
             else :
                 finalanswer[k][j] = list(map(removefirstletter, result[k*4 + j], ["A", "B", "C", "D"]))
     return finalanswer
-def questionpart(input, inputForm, language, difficulty):
+def questionpart(input, inputForm, language):
     prompt = ""
     if inputForm == "Theme":
-        prompt = f'I want you to answer in {language}, I have to exercise myself about {input}. Generate 5 {difficulty} questions about {input} (I really need 5 questions with 5 answers and 5 hints). I also want the 5 answers to these questions as well as 5 helpful hints that does not make the answer too obvious. Your response must be in interpretable code: ["Question1", "Answer1", "Hint1", "Question2", "Answer2", "Hint2"...]. Only answer in interpretable code:  AN ARRAY. NOTHING ELSE'
+        prompt = f'I want you to answer in {language}, I have to exercise myself about {input}. Generate 5 questions about {input} (I really need 5 questions with 5 answers and 5 hints). I also want the 5 answers to these questions as well as 5 helpful hints that does not make the answer too obvious. Your response must be in interpretable code: ["Question1", "Answer1", "Hint1", "Question2", "Answer2", "Hint2"...]. Only answer in interpretable code:  AN ARRAY. NOTHING ELSE'
     elif inputForm == "Cours":
-        prompt = f'I want you to answer in {language}, I have to exercise myself about this course: "{input}". Generate 5 questions about this course (I really need 5 questions with four possible answer for each question with the 5 answers and 5 hints). I also want the answer to these questions as well as 5 helpful hints for the questions. All the answers has to be in the text. Your response must be in interpretable code: ["Question1", "Answer1", "Hint1", "Question2", "Answer2", "Hint2"...]. Only answer in interpretable code:  AN ARRAY. NOTHING ELSE'
+        prompt = f'I want you to answer in {language}, I have to exercise myself about this course: "{input}". Generate 5 questions about this course (I really need 5 questions with 5 answers and 5 hints). I also want the answer to these questions as well as 5 hints for the questions. All the answers has to be in the text. Your response must be interpretable code: ["Question1", "Answer1", "Hint1", "Question2", "Answer2", "Hint2"...]. Only answer in interpretable code:  AN ARRAY. NOTHING ELSE'
 
     headers = {
     "Content-Type": "application/json",
@@ -272,20 +272,20 @@ def questionpart(input, inputForm, language, difficulty):
     }
 
     response = requests.post(url, json=data, headers=headers)
+    finalanswer = [[""] * 3 for k in range(5)]
     if response.status_code == 200:
         result = response.json()
         result = getContent(result, False)
-        result = removespaces(result)
+        result = spaces(result)
         print(result)
         result = eval(result)
     else:
         print(f"Error: {response.status_code}, {response.text}")
-    finalanswer = [[""] * 3 for k in range(len(result)//3)]
-    for k in range(len(result)//3) :
+    for k in range(5) :
         for j in range(3) :
             finalanswer[k][j] = result[k*3 + j]
     return finalanswer
-
+    
 def getTheme(input):
     headers = {
     "Content-Type": "application/json",

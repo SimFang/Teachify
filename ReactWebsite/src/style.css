@@ -1,0 +1,159 @@
+@font-face {
+  font-family: BakBakOne;
+  src: url(./assets/BakbakOne-Regular.ttf);
+}
+.blue1 {
+  color: #EDF2FB;
+}
+
+.blue2 {
+  color: #E2EAFC;
+}
+
+.blue3 {
+  color: #D7E3FC;
+}
+
+.blue4 {
+  color: #CCDBFD;
+}
+
+.blue5 {
+  color: #C1D3FE;
+}
+
+.blue6 {
+  color: #B6CCFE;
+}
+
+.blue7 {
+  color: #ABC4FF;
+}
+
+.button {
+  background-color: #ABC4FF;
+  color: white;
+  border-radius: 15px;
+  font-family: "BakBakOne";
+  padding: 0.5em 3em 0.5em 3em;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  background-color: #EDF2FB;
+  height: fit-content;
+  padding: 0.7em;
+  border-radius: 15px;
+}
+
+.input {
+  height: 3em;
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  font-family: "BakBakOne";
+  font-size: 1em;
+  letter-spacing: 3px;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+a:hover {
+  border-bottom: solid 1px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.157em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+#header {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  box-shadow: 2px 3px 11px 5px rgba(0, 0, 0, 0.1);
+}
+#header ul {
+  display: flex;
+  list-style: none;
+  font-family: "BakBakOne";
+}
+#header ul li {
+  margin-left: 2em;
+}
+
+#introsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#introsection img {
+  width: 60vw;
+  height: 70vh;
+  background-color: black;
+  border-radius: 25px;
+}
+#introsection ul {
+  color: white;
+  position: absolute;
+  top: 40%;
+  list-style: none;
+  font-size: 3.157em;
+  font-family: "BakBakOne";
+}
+
+/*# sourceMappingURL=style.css.map */

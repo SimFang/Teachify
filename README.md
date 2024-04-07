@@ -1,6 +1,9 @@
 # TEACHIFY
 
-Description concise du projet.
+Teachify AI est une application web qui vise à générer des cours, et fournit des exercices simples et efficaces afin de performer et d’améliorer la mémorisation des informations.
+L’application utilise une intelligence artificielle de génération de texte afin de créer des cours pertinents et cohérents. Additionné à la possibilité de générer des exercices par rapport à un cours généré ou un cours donné.
+
+Un mélange entre intelligence artificielle et pédagogie !
 
 ## Installation
 

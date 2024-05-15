@@ -1,0 +1,616 @@
+@use "b";
+
+@mixin addMargins {
+    margin-right: b.$space-around;
+    margin-left: b.$space-around;
+}
+
+.QCM {
+    min-width: 100vw;
+    position: absolute;
+    top: 0;
+    height: fit-content;
+    min-height: 100vh;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    background-color: b.$black;
+    color: white;
+    color: linear-gradient(177deg, rgba(255,255,255,1) 0%, rgba(172,214,225,1) 100%);
+    .QCMhintbulbon {
+        -webkit-filter: drop-shadow(0 0 30px #cab812);
+            filter: drop-shadow(0 0 30px #ddbe0e);
+            color: #e6dca8;
+    }
+    .QCMhintOn {
+        @include addMargins;
+        animation: HintSlideIn ease 600ms;
+    }
+    .QCMhintOff {
+        @include addMargins;
+        display: none
+    }
+
+    .QCMintrosection{
+        @include addMargins;
+        display: flex;
+        justify-content: space-between;
+        svg {
+            width: calc(2em + 2vw);
+            transition: all ease 600ms;
+            cursor: pointer;
+        }
+        svg:hover {
+            -webkit-filter: drop-shadow(0 0 30px #cab812);
+            filter: drop-shadow(0 0 30px #ddbe0e);
+            color: #e6dca8;
+        }
+        h3 {
+            font-family: InterExtraLight;
+        }
+        
+        .score {
+            font-size: b.$fontsize-3;
+            font-family: BakBakOne;
+            transform: rotate(20deg);
+        }
+    }
+    h1 {
+        font-size: calc(1em + 2vw);
+        @include addMargins;
+        text-align: center;
+        span {
+            color: b.$blue-5;
+        }
+    }
+    .QCMquestionpart {
+        position: relative;
+        display: flex;
+        height: fit-content;
+        flex-wrap: wrap;
+        @include addMargins;
+        max-width: b.$mid-space;
+        justify-content: start;
+        text-align: center;
+        
+        .QCMhideanswer {
+            transition: all ease 300ms;
+            position: absolute;
+            right: 0%;
+            display: none;
+            opacity: 0;
+        }
+        .QCMshowanswer {
+            z-index: -1;
+            transition: all ease 300ms 1s;
+            display: block;
+            position: absolute;
+            right: 20%;
+            font-size: 3em;
+            animation : QCManswershowup ease 1s 1 0s;
+            color: inherit;
+            -webkit-text-stroke: 1px #a7fb8d; /* Text stroke */
+            text-transform : uppercase;
+        }
+        .QCMshowwronganswer {
+            z-index: -1;
+            transition: all ease 300ms 1s;
+            display: block;
+            position: absolute;
+            right: 20%;
+            font-size: 3em;
+            animation : QCManswershowup ease 1s 1 0s;
+            color: inherit;
+            -webkit-text-stroke: 1px #fb9c8d; /* Text stroke */
+            text-transform : uppercase;
+        }
+        
+        div {
+            cursor: pointer;
+            z-index: 2;
+            overflow: hidden;
+            background: rgb(255,255,255);
+            width: 40%;
+            height: calc(10vh + 4em);
+            border-radius: 20px;
+            margin: 2%;
+            color: b.$black;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            animation: slideDown 200ms ease;
+            transition: height 200ms ease 200ms, opacity 200ms ease 0s, width 200ms ease 200ms, margin 200ms ease 0s, transform 200ms ease 0s;
+
+        }
+        
+        div.QCMhidechoice {
+            opacity: 0;
+            height: 0;
+            width: 0;
+            margin: 0;
+        } 
+        .QCMshowgoodchoice {
+            z-index: 2;
+            margin: 0;
+            background: linear-gradient(180deg, b.$black 20%, b.$black 0%, rgba(167, 251, 141, 0.459) 100%);
+            animation: QCMbeat ease 400ms 1;
+            border-radius: 0;
+        }
+        .QCMshowwrongchoice {
+            z-index: 2;
+            margin: 0;
+            background: linear-gradient(180deg, b.$black 20%, b.$black 0%, #fb9c8d93 100%);
+            animation: QCMbeat ease 400ms 1;
+            border-radius: 0;
+        }
+        
+       
+    }
+    .QCManswerpart {
+        @include addMargins;
+        margin-top: 5vh;
+        p {
+            font-size: b.$fontsize-3;
+            font-family: InterLight;
+            animation: QCMslideUp ease 1s 1;
+        }
+        div {
+            width: 100%;
+            height: 8vh;
+            background: #434853;
+            border-radius: 20px;
+            display: flex;
+            position: relative;
+            align-items: center;
+
+            div {
+                background-color: white;
+                height: 100%;
+                width: 20vw;
+                display: flex;
+                gap: 5vw;
+                transition : all ease 200ms ;
+                position: absolute;
+                left: 0;
+                h4 {
+                    margin-left: 2vw;
+                    color: b.$black;
+                    @include b.center;
+                    border-radius: 20px;
+                    
+                    font-family: InterBold;
+                    font-size: b.$fontsize-3;
+                    position: relative;
+                    transition : all ease 200ms ;
+
+                }
+                svg {
+                    transform: rotate(90deg) translateY(0px);
+                    transition : all ease 200ms ;
+
+                    color: b.$black;
+                    width: 2em;
+                }
+            }
+            div:hover {
+                background-color: rgb(218, 218, 218);
+            }
+            div:hover svg {
+                transform: rotate(90deg) translateY(-20px);
+            }
+            div:hover h4 {
+                transform: translateX(20px);
+            }
+            
+        }
+        .QCMnext {
+            left: calc(b.$mid-space - 20vw);
+        }
+    }
+    
+}
+.QCMoff {
+    display: none;
+}
+
+// QUESTION PART 
+.QuestionContainer {
+position: absolute;
+top: 0;
+background-color: b.$black;
+min-height: 100vh;
+height: fit-content;
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.Question {
+    h3:nth-child(1){
+        font-size: b.$fontsize-3;
+        font-family: InterExtraLight;
+        letter-spacing: 2px;
+    }
+    width: 40vw;
+    min-width: 320px;
+    background-color: red;
+    height: fit-content;
+    min-height: 100vh;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    background-color: b.$black;
+    color: white;
+    color: linear-gradient(177deg, rgba(255,255,255,1) 0%, rgba(172,214,225,1) 100%);
+    display: flex;
+    flex-direction: column;
+
+    @keyframes slideUpQuestionQuestion {
+        0% {
+            transform: translateY(60%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(10%);
+            opacity: 1;
+        }
+    }
+    .NewQuestionContext {
+        img {
+            width:100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 20px;
+            opacity: 0.2;
+            top: 0%;
+            object-fit: cover;
+        }
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(150,150,150,1) 0%, rgba(0,0,0,1) 63%);
+        width: 100%;
+        min-height: 30vh;
+        height: fit-content;
+        border-radius: 20px;
+        font-size: b.$fontsize-2;
+        font-family: InterExtraLight;
+        animation: slideUpQuestionQuestion ease-out 500ms 1;
+        transform: translateY(10%);
+
+        z-index: 1;
+        p {
+            margin: 2%;
+            width: 60%;
+        }
+    }
+    .NewQuestionQuestion {
+        word-wrap: break-word;
+        animation: PopIn ease 200ms 1;
+        border: 2px solid white;
+        width: 100%;
+        background-color: b.$black;
+        height: fit-content;
+        border-radius: 20px;
+        font-size: b.$fontsize-3;
+        font-family: InterBold;
+        z-index: 1;
+        p {
+            margin: 5%;
+        }
+    }
+
+    @keyframes slideDownQuestionAnswer {
+        0% {
+            margin-top: 0vh;
+            opacity: 0;
+        }
+        50% {
+            margin-top: 0vh;
+            opacity: 0;
+        }
+        100% {
+            margin-top: 15vh;
+            opacity: 1;
+        }
+    }
+    .NewQuestionAnswerpart {
+        animation : slideDownQuestionAnswer ease 800ms 1;
+        margin-top: 15vh;
+        padding-bottom: 5vh;
+        min-height: 50vh;
+        height: fit-content;
+        border: 1px white solid;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        textarea {
+            margin: 2%;
+            height: 40vh;
+            width: 80%;
+            max-width: 90%;
+            background-color: b.$black;
+            border: none;
+            font-family: Inter;
+            font-size: b.$fontsize-3;
+            color: white;
+        }
+       
+        div {
+            background-color: #434853;
+            width: 50%;
+            border-radius: 20px;
+            color: b.$black;
+            align-self: center;
+            div {
+                background-color: #D7D8DA;
+                width: fit-content;
+                padding: 0 5%;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                svg {
+                    width: 1em;
+                    transform: rotate(90deg);
+                }
+                cursor: pointer;
+                transition: all ease 200ms;
+            }
+            div:hover {
+                transform: translateX(20%);
+            }
+        }
+
+    }
+}
+
+// QUESTION RESULT PAGE
+
+.QuestionResultPage {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    height: fit-content;
+    min-height: 100vh;
+    padding-bottom: 5vw;
+    background-color: b.$black;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .QuestionResultPageBanner {
+        height: 12vw;
+        background: rgb(255,255,255);
+        background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(181,202,247,1) 88%);        
+        width: 100%;
+    }
+    h1 {
+        width:calc(20rem + 20vw);
+        font-size: calc(b.$fontsize-5 + b.$fontsize-3);
+        text-align: center;
+        animation: slideUp ease 200ms 1;
+    }
+    .QuestionResultPageGrade {
+        background: rgb(255,255,255);
+        background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(181,202,247,1) 78%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        width:calc(20rem + 20vw);
+        margin-bottom: 2vh;
+        font-size: b.$fontsize-5;
+        color: b.$black;
+        font-family: InterBold;
+        animation: PopIn ease 500ms 1;
+
+    }
+    .QuestionResultPageStarsContainer{
+        width:calc(20rem + 20vw);
+        display: flex;
+        justify-content: space-between;
+        animation: PopIn ease 500ms 1;
+
+        svg {
+            animation: StarPopIn ease 400ms 1;
+            color: white;
+            path {
+                fill: white;
+                transition: all ease 200ms;
+                animation: StarPopInColorChange ease 400ms 1;
+            }
+            transition: all ease 200ms;
+
+        }
+        svg:hover {
+            path {
+                fill:rgb(255, 220, 105);
+            }
+            transform: scale(1.2);
+        }
+    
+    }
+    .QuestionResultPageContainer{
+        height: fit-content;
+        margin-top: 10vh;
+        width:calc(20rem + 20vw);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        div {
+            cursor: pointer;
+            border-radius: 20px;
+            border: 1px white solid;
+            height: 8vh;
+            padding: 1vw;
+            transition: all ease 200ms;
+            animation: slideDown ease 200ms 1;
+            z-index: 2;
+            background-color: b.$black;
+        }
+        div:hover {
+            background-color: white;
+            color: b.$black;
+            transform: scale(1.02);
+        }
+        .QuestionResultPageSectionSelected {
+            background-color: white;
+            color: b.$black;
+            transform: scale(1.03);
+            
+        }
+    }
+    
+    .QuestionResultPageSectionOpen {
+        width:calc(20rem + 18vw);
+        height : fit-content;
+        padding: 2vw 1vw;
+        transform: translateY(-3.6vh);
+        border: 1px solid white;
+        z-index: 1;
+        transition: all ease 200ms;
+        border-radius: 0 0 20px 20px;
+        
+    }
+    .QuestionResultPageSectionClosed {
+        width:calc(20rem + 18vw);
+        height : 0;
+        
+        overflow-y: hidden;
+
+        transform: translateY(-4.2vh);
+        border: 1px solid white;
+        padding: 0vw 0vw;
+        border-radius: 0 0 20px 20px;
+        z-index: 1;
+        transition: all ease 200ms;
+
+    }
+}
+
+// QCM RESULT PAGE
+
+.ExerciseResultPage {
+    min-width: 100vw;
+    position: absolute;
+    top: 0;
+    height: fit-content;
+    min-height: 100vh;
+    padding-bottom: 5vw;
+    background-color: b.$black;
+    color: white;
+    color: linear-gradient(177deg, rgba(255,255,255,1) 20%, rgba(172,214,225,1) 100%);
+    .ExerciseResultPageRounddiv {
+        transform: translateY(-70vh);
+        div:nth-child(2) {
+            height: 100vh;
+            background: rgb(255,255,255);
+            background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(181,202,247,1) 100%); 
+            border-radius: 40%;
+        }
+    }
+    .ExerciseResultPageAward {
+        animation: ResultPagePop .5s ease;
+        position: absolute;
+        top: 15vh;
+        height: fit-content;
+        width: 100vw;
+        transition: all ease 200ms;
+        @include b.center;
+        svg {
+            path {
+                transition: all ease 200ms;
+            }
+            width: 30vw;
+            height: 20vw;
+            left: calc(50vw - (30vw / 2));
+            
+        }
+        h3 {
+            span {
+                color: b.$blue-7;
+            }
+            font-size: b.$fontsize-5;
+            left: calc(48vw);
+            color: b.$black;
+            position: absolute;
+            top: 5vh;
+        }
+    }
+    .ExerciseResultPageAward:hover {
+        transform: scale(1.1);
+        
+    }
+    .ExerciseResultPageAward:active {
+        transform: scale(0.9) rotate(12deg);
+        svg {
+            path {
+                fill: rgb(255, 220, 105);
+            }
+        }
+    }
+    .ExerciseResultPageSubpage {
+        animation: ResultPagePopSubpage 2s ease 1;
+        transform: translateY(-40vh);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        @include addMargins;
+        svg {
+            width: 2em;
+        }
+        div {
+            width: 60%;
+            height: 8vh;
+            background: #434853;
+            border-radius: 20px;
+            display: flex;
+            position: relative;
+            align-items: center;
+
+            div {
+                background-color: white;
+                height: 100%;
+                width: 20vw;
+                display: flex;
+                gap: 5vw;
+                transition : all ease 200ms ;
+                position: absolute;
+                left: 0;
+                h4 {
+                    margin-left: 2vw;
+                    color: b.$black;
+                    @include b.center;
+                    border-radius: 20px;
+                    
+                    font-family: InterBold;
+                    font-size: b.$fontsize-3;
+                    position: relative;
+                    transition : all ease 200ms ;
+
+                }
+                svg {
+                    transform: rotate(90deg) translateY(0px);
+                    transition : all ease 200ms ;
+
+                    color: b.$black;
+                    width: 2em;
+                }
+            }
+            div:hover {
+                background-color: rgb(218, 218, 218);
+            }
+            div:hover svg {
+                transform: rotate(90deg) translateY(-20px);
+            }
+            div:hover h4 {
+                transform: translateX(20px);
+            }
+            
+        }
+        .QCMnext {
+            left: calc(100% - 20vw);
+        }
+    }
+}
+.ResultPageOff {
+    opacity: 0;
+}

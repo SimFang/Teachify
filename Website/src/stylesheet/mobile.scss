@@ -1,0 +1,370 @@
+@use 'b';
+
+@media (max-width: b.$breakpoint-phone) {
+    $space-around : 2vw;
+    $mid-space : 96vw;
+    $testcolor : red;
+    #pomme {
+        background-color: blue !important;
+    }
+    .spaced {
+        margin-left: $space-around;
+        margin-right: $space-around;
+      }
+
+      h1 {
+        font-size: b.$fontsize-4 !important;
+      }
+    #introsection h1:nth-child(1){
+      margin-bottom: 5vh;
+    }
+    #videointrosection {
+        flex-direction: column;
+        video {
+          width: 80% !important;
+        }
+      }
+    #loading {
+        width: 100vw !important; 
+        height: 100vh !important;
+    }
+    #learnCourse {
+        width: $mid-space;
+        font-size: b.$fontsize-1 !important;
+      }
+      .settings {
+        flex-direction: column;
+      }
+
+    // hamburger menu 
+    #header div:nth-child(2) ul {
+        display: none;
+    }
+    .hamburgerMenuOn{
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    .hamburgerMenuOff {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    #hamburgerMenu {
+        transition: all ease 200ms;
+        animation : slideRight ease 200ms;
+        z-index: 3;
+        position: fixed;
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-y: none;
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 60%;
+            list-style: none;
+            
+        }
+
+    }
+    #header div:nth-child(3) {
+        display: flex !important;
+        cursor: pointer;
+        svg {
+            transform: scale(1.1);
+        }        
+        svg:hover {
+            transform: scale(1.2);
+        }
+
+    }
+    #coursebot {
+        font-size: b.$fontsize-1 !important;
+        right: calc($space-around) !important;
+        width : calc($mid-space - 8vw) !important;
+        div:nth-child(1) {
+
+        div:nth-child(1) {
+          svg:nth-child(1) {
+            display: none;
+          }
+        }
+      }
+    }
+
+
+
+
+
+
+// QCM PART
+@mixin addMargins {
+  margin-right: 2vw !important;
+  margin-left: 2vw !important;
+}
+@keyframes QCManswershowup {
+  0% {
+    opacity: 0;
+    right: 100%;
+    transform: translateX(-80px);
+  }
+  50% {
+    opacity: 0;
+    right: 100%;
+    transform: translateX(-80px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+    right: 20%;
+  }
+}
+
+.QCM {
+  
+  .QCMhintOn {
+    @include addMargins;
+}
+.QCMhintOff {
+    @include addMargins;
+}
+        .QCMintrosection{
+          @include addMargins;
+      }
+      h1 { 
+          @include addMargins;
+      }
+    .QCMquestionpart {
+        @include addMargins;
+        max-width: 100% !important;
+
+        
+        .QCMshowwronganswer {
+            right: 5% !important;
+        }
+        
+        div {
+            h3 {
+              font-size: b.$fontsize-1 !important;
+              overflow-y: scroll
+            }
+        } 
+    }
+    .QCManswerpart {
+        @include addMargins;
+        p {
+            font-size: b.$fontsize-2 !important;
+            max-height: 25vh;
+            overflow-y: scroll;
+        }
+        div {
+
+            height: 10vh!important;
+            div {
+            
+                width: 6em !important;
+             
+                justify-content: center;
+                
+                h4 {
+                    display: none !important;
+                }
+            }
+            
+        }
+        .QCMnext {
+            left: calc(96vw - 6em) !important;
+        }
+    }
+    
+}
+
+.ExerciseResultPage {
+  
+  .ExerciseResultPageRounddiv {
+      div:nth-child(2) {
+          border-radius: 40vw !important;
+      }
+  }
+  .ExerciseResultPageAward {
+      top: 20vh !important;
+      svg {
+          width: 14em !important;
+          height: 14em !important;
+          
+      }
+      h3 {
+          font-size: b.$fontsize-4 !important;
+          left: calc(44vw) !important;
+          top: 5cqmin !important;
+      }
+  }
+  .ExerciseResultPageAward:hover {
+      transform: scale(1.1);
+      
+  }
+  .ExerciseResultPageAward:active {
+      transform: scale(0.9) rotate(12deg);
+      svg {
+          path {
+              fill: rgb(255, 220, 105);
+          }
+      }
+  }
+  .ExerciseResultPageSubpage {
+      @include addMargins;
+     
+      div {
+          div {
+              h4 {
+                  display: none !important;
+              }
+              svg {         
+                margin-left: 5vw;      
+              }
+          }       
+      }   
+  }
+}
+
+// QUESTION RESULT PAGE 
+
+// QUESTION RESULT PAGE
+
+.QuestionResultPage {
+    .QuestionResultPageGrade {
+        width: 80% !important;
+        border-radius: 20px;
+        font-size: b.$fontsize-4 !important;
+    }
+    .QuestionResultPageStarsContainer{
+        width:calc(18rem + 15vw) !important;
+    }
+    .QuestionResultPageContainer{
+        height: fit-content;
+        margin-top: 10vh;
+        width:calc(18rem + 15vw) !important;
+        display: flex;
+        flex-direction: column;
+        gap: 0px !important;
+        div {
+            @include b.center;
+        }
+    }
+    
+    .QuestionResultPageSectionOpen {
+      width:calc(18rem + 13vw) !important;
+      height : fit-content;
+        padding: 5vw 1vw !important;
+        transform: translateY(-7vw)  !important;
+        border: 1px solid white;
+        z-index: 1;
+        transition: all ease 200ms;
+        border-radius: 0 0 20px 20px;
+        
+    }
+    .QuestionResultPageSectionClosed {
+      width:calc(18rem + 15vw) !important;
+      height : 0;
+        
+        overflow-y: hidden;
+
+        transform: translateY(-5.2vh);
+        border: 1px solid white;
+        border-radius: 0 0 20px 20px;
+        z-index: 1;
+        transition: all ease 200ms;
+
+    }
+}
+
+// QUESTION 
+
+.Question {
+
+  .NewQuestionContext {
+      font-size: b.$fontsize-2 !important;
+  }
+  .NewQuestionQuestion {
+      font-size: b.$fontsize-3 !important;
+  }
+
+  @keyframes slideDownQuestionAnswer {
+      0% {
+          margin-top: 0vh;
+          opacity: 0;
+      }
+      50% {
+          margin-top: 0vh;
+          opacity: 0;
+      }
+      100% {
+          margin-top: 15vh;
+          opacity: 1;
+      }
+  }
+  .NewQuestionAnswerpart {
+      textarea {
+          font-size: b.$fontsize-2 !important;
+      }
+  }
+}
+
+// Exercises box container 
+
+
+.Exerciseboxopen {
+    margin: 0 !important;
+}
+
+// Register form 
+.ConnexionSectionWarningMessage {
+    font-size: b.$fontsize-1 !important;
+}
+
+// Personal Page
+
+.PersonalPage {
+    .PersonalPageBanner {
+        div {
+            bottom: -2.5em !important;
+        }
+    }
+    .PersonalPageQuote {
+      .PersonalPageQuoteContent {
+        p {
+            font-size: b.$fontsize-2 !important;
+        } 
+      }
+    }
+    .PersonalPageBoxContainer {
+        .PersonalPageBoxContentContainer {
+            .PersonalPageBox {
+                font-size: min(b.$fontsize-1, 10vw) !important;
+            }
+            .PersonalPageSmallBox {
+                width: 30% !important;
+                margin: 0.5%;
+            }
+            .PersonalPageMediumBox {
+                width: 40% !important;
+                margin: 0.5%;
+            }
+            .PersonalPageBigBox {
+                width: 45% !important;
+                margin: 0.5%;
+            }
+        }
+    }
+}
+}
+
+.PersonalSectionExitButton {
+    width: 2em !important;
+    bottom: -1.4em !important;
+
+}

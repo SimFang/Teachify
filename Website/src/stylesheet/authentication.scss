@@ -1,0 +1,449 @@
+@use "b";
+
+.ConnexionSection {
+    height: 100vh;
+    width: 100vw;
+    @include b.center;
+    background-image: url(./assets/backdrop.jpg) ;
+    background-size: cover;
+    .ConnexionSectionCoverImg {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        opacity: 0.2;
+    }
+}
+.ConnexionSectionForm {
+    animation: slideUp ease 500ms;
+    background-color: rgba(255, 255, 255, 0.356);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px white solid;
+    border-radius: 20px;
+    padding: 2vw;
+    min-width: 320px;
+    width: 25vw;
+    h1 {
+        color: white;
+        font-family: BakBakOne;
+    }
+    form {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .ConnexionSectionInput {
+            width: 50%;
+            margin-top: 3%;
+            height: 6vh;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 40px;
+            border : 1px solid white;
+            color: white;
+            padding-left: 10%;
+            position: relative;
+            transition: all ease 200ms;
+            svg {
+                position: absolute;
+                right: 5%;
+                width: 1em;
+                top: 22%;
+            }
+            input {
+                width: 80%;
+                height: 98%;
+                background-color: transparent;
+                border: none;
+                color: white;
+            }
+            input:focus {
+                outline: none;
+            }
+            input::placeholder {
+                color: white;
+                font-family: InterLight;
+            }
+        }
+        .ConnexionSectionInput:hover {
+            filter: drop-shadow(1px 11px 4px #00000017);
+            background-color: rgba(255, 255, 255, 0.322);
+            color: black;
+            transform: translateY(-5%);
+        }
+        
+        button {
+            height: 6vh;
+            margin-top: 3%;
+            border-radius: 40px;
+            border : 0px solid white;
+            color: b.$black;
+            width: 60%;
+            font-family: InterBold;
+            transition: all ease 200ms;
+        }
+        button:hover {
+            background-color: b.$blue-7;
+            color: white;
+            border : 3px solid white;
+
+        }
+        button:focus {
+            outline: none;
+            border : 2px solid white;
+        }
+        h4{
+            color: white;
+            font-family: Inter;
+            font-weight: normal;
+            span {
+                font-family: InterBold;
+            }
+        }
+    }
+    .ConnexionSectionWarningMessage {
+        font-size: b.$fontsize-2;
+        max-width: 80%;
+        @include b.center;
+        transition: all ease 200ms;
+        p {
+            text-align: center;
+            max-width: 80%;
+            color: b.$red;
+            font-family: InterBold;
+        }
+    }
+    .ConnexionSectionWarningMessageOn {
+        height: fit-content;
+    } 
+    .ConnexionSectionWarningMessageOff {
+        height: 0;
+    }
+    
+}
+
+.PersonalPage {
+    animation: slideRight ease 300ms 1;
+    height: 100vh;
+    width: 100vw;
+    color: b.$black;
+    .PersonalPageBanner {
+        position:relative;
+        height: 20vh;
+        background-image: url(./assets/backdrop.jpg) ;
+        background-size: cover;    
+        div {
+            position: absolute;
+            bottom: -3.5em;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            img {
+                width: 100px;
+                height: 100px;
+                margin: 0% 4%;
+                border-radius: 50%;
+            }
+        }
+    }
+    .PersonalPageQuote {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+      .PersonalPageQuoteContent {
+        margin-top: 12vh;
+        margin-bottom: 4vh;
+        min-width: 320px;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        gap: 2%;
+        align-items: center;
+        p {
+            font-size: b.$fontsize-3;
+            margin: 0% 5%;
+        } 
+        div {
+            min-width: 2em;
+            height: 2em;
+            transition: all ease 200ms;
+            cursor: pointer;
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+        div:hover {
+            transform: scale(1.1)
+        }
+        div:active {
+            transform: scale(1.5)
+        }
+      }
+    }
+    .PersonalPageBoxContainer {
+
+        @include b.center;
+        .PersonalPageBoxContentContainer {
+            display: flex;
+            flex-wrap: wrap;
+            min-width: 320px;
+            width: 60%;
+            justify-content: center;
+            position: relative;
+            overflow: visible;
+            .PersonalSectionBoxDeleteButton{
+                border: solid 2px rgba(0, 0, 0, 0);
+                position: absolute;
+                top: -1.5em;
+                left: 0;
+                border-radius: 20px 20px 0 0;
+                width: 98%;
+                height: 2em;
+                transition: all ease 200ms;
+                @include b.center;
+                background-color: rgb(255, 255, 255);
+                
+                z-index: 0;
+                svg {
+                    transition: all ease 200ms;
+                    width: 2em;
+                    opacity: 0.02;
+                }
+            }
+            .PersonalSectionBoxDeleteButton:hover{
+                svg {
+                    width: 2em;
+                    opacity: 1;
+                }
+            }
+            .PersonalPageBox {
+                img {
+                    border-radius: 20px;
+                    position: absolute;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; /* Scale the image as large as possible while maintaining its aspect ratio and cropping the excess */                    
+                }
+                transition: all ease 200ms;
+                height: 20vh;
+                width: fit-content;
+                border-radius: 20px;
+                font-family: InterExtraLight;
+                font-size: min(b.$fontsize-2, 10vw);
+                display: flex;
+                color: white;
+                position: relative;
+                justify-content: flex-start;
+                align-items: flex-end;
+                word-wrap: break-word;
+                .PersonalPageBoxCover {
+                    border-radius: 20px;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: black;
+                    opacity: 0;
+                    transition: all ease 200ms;
+                }
+               p:nth-child(3) {
+                transition: all ease 200ms;
+
+                opacity: 1;
+                margin-left: 5%;
+                    font-family: InterBold;
+                }
+                p:nth-child(4){
+                    transition: all ease 200ms;
+
+                    position: absolute;
+                    top: 0;
+                    right: 5%;
+                    opacity: 0;
+                }
+            }
+            .PersonalPageSmallBox {
+                width: 20%;
+                margin: 2% 0.5%;
+            }
+            .PersonalPageMediumBox {
+                width: 30%;
+                margin: 2% 0.5%;
+            }
+            .PersonalPageBigBox {
+                width: 40%;
+                margin: 2% 0.5%;
+            }
+            .PersonalPageBox:hover {
+                cursor: pointer;
+                transform: translateY(-1%);
+                filter: drop-shadow(1px 11px 4px #00000017);
+                .PersonalPageBoxCover {
+                    opacity: 0.2;
+                }
+                p:nth-child(3){
+                    transform: translateY(-40%);
+                }
+                p:nth-child(4){
+                    opacity: 1;
+                }
+                
+            }
+        }
+    }
+}
+.ThemeSectionSticker{
+    position: relative;
+}
+.PersonalSection {
+    transition: all ease 200ms;
+    animation: slideRight ease 400ms 1;
+    background-color: white;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    color: b.$black;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    .PersonalSectionHeader {
+        height: 200px;
+        width: 100%;
+        z-index: 0;
+        bottom: 0;
+        position: relative;
+        @include b.center;
+        img {
+            z-index: -1;
+            margin-top: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0.5;
+        }
+        h1 {
+            position: absolute;
+            bottom: -1.2em;
+        }
+        .PersonalSectionExitButton {
+            transition: all ease 200ms;
+            position: absolute;
+            bottom: -1em;
+            width: 3em;
+            height: 3em;
+            right: 10%;
+            cursor: pointer;
+            path {
+                transition: all ease 200ms;
+            }
+        }
+        .PersonalSectionExitButton:hover{
+            transform: scale(1.1);
+            path:nth-child(1) {
+                fill : b.$red;
+            }
+        }
+    }
+    .PersonalSectionContainer {
+        @include b.center;
+        .PersonalSectionBoxContainer {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10vh;
+            min-width: 320px;
+            width: 50vw;
+            .PersonalSectionBox {
+                margin:3%;
+                height: 18vh;
+                max-height: 12em;
+                transition: all ease 200ms;
+                background-color: white;
+                border-radius: 10px;
+                border: solid black 2px;
+                width: 8em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                svg {
+                    width: 3em;
+                    height: 3em;
+                    top: -10%;
+                    right: -10%;
+                    position: absolute;
+                }
+                h4 {
+                    font-size: b.$fontsize-3;
+                    font-family: InterBold;
+                }
+                h5 {
+                    font-size: b.$fontsize-2;
+                    font-family: InterLight;
+                    transition:all ease 200ms;
+                }
+            }
+            .PersonalSectionBox:hover {
+                filter: drop-shadow(1px 11px 4px #00000017);
+                transform: translateY(-10%) ;
+                background-color: rgb(240, 240, 240);
+                cursor: pointer;
+            }
+            .PersonalSectionMore {
+                margin:3% 0.5%;
+                height: 18vh;
+                max-height: 12em;
+                transition: all ease 200ms;
+                background-color: rgb(250, 249, 249);
+                border-radius: 10px;
+                width: 8em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                cursor: pointer;
+                svg {
+                    width: 4em;
+                    height: 4em;
+                    transition: all ease 200ms;
+
+                    path {
+                        fill: b.$black;
+                        transition: all ease 200ms;
+                    }
+                }
+            }
+            .PersonalSectionMore:hover {
+                background-color: b.$black;
+                color: white;
+                svg {
+                    transform: scale(1.2);
+                    path {
+                        fill: white;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+.PersonalSectionIsLeaving {
+    transform: translateX(40%);
+    opacity: 0;
+}
+.PersonalSectionExerciseSticker {
+    position: sticky;
+    height: fit-content;
+    z-index: 2;
+    background-color: black;
+    width: 100vw;
+    opacity: 1;
+}

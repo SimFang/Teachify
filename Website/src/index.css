@@ -1,0 +1,2597 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
+@font-face {
+  font-family: BakBakOne;
+  src: url(./assets/BakbakOne-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(./assets/Inter-VariableFont_slnt,wght.ttf);
+}
+@font-face {
+  font-family: InterBold;
+  src: url(./assets/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: InterExtraLight;
+  src: url(./assets/Inter-ExtraLight.ttf);
+}
+@font-face {
+  font-family: InterLight;
+  src: url(./assets/Inter-Light.ttf);
+}
+strong {
+  font-family: InterBold;
+}
+
+.blue1 {
+  color: #EDF2FB;
+}
+
+.blue2 {
+  color: #E2EAFC;
+}
+
+.blue3 {
+  color: #D7E3FC;
+}
+
+.blue4 {
+  color: #CCDBFD;
+}
+
+.blue5 {
+  color: #C1D3FE;
+}
+
+.blue6 {
+  color: #B6CCFE;
+}
+
+.blue7 {
+  color: #ABC4FF;
+}
+
+.button {
+  background-color: #1b1d22;
+  height: 3em;
+  color: white;
+  border-radius: 15px;
+  font-family: "BakBakOne";
+  padding: 0.5em 3em 0.5em 3em;
+  transition: ease all 300ms;
+}
+.button:hover {
+  transform: scale(1.02);
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  background-color: #EDF2FB;
+  height: fit-content;
+  padding: 0.7em;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.input {
+  resize: vertical; /* Allow vertical resizing */
+  height: 3em;
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  font-family: "BakBakOne";
+  font-size: 1em;
+  letter-spacing: 3px;
+  transition: height ease 300ms;
+}
+.input.courseInput {
+  height: 12em;
+}
+
+.nametag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C1D3FE;
+  color: white;
+  width: 10em;
+  transform: rotate(20deg);
+  border-radius: 20px;
+}
+
+.spaced {
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+.structure {
+  display: flex;
+  justify-content: space-between;
+}
+.structure .structureleft {
+  margin-right: 5vw;
+}
+
+.line {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line div {
+  position: absolute;
+  top: -110px;
+  width: 60vw;
+  height: 100px;
+  border-bottom: #2C3038 2px solid;
+}
+
+.courseline {
+  border-bottom: black 1px solid;
+}
+
+/*The code below is only for quote */
+.quote {
+  padding-left: 1vw;
+  font-weight: bolder;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #1b1d22; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: typing 9s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+.PassButton {
+  background-color: #434853;
+  width: 60vmin;
+  border-radius: 20px;
+  height: 8vh;
+  color: #1b1d22;
+}
+.PassButton div {
+  background-color: #E2EAFC;
+  height: 100%;
+  width: 50%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease 300ms;
+}
+.PassButton div svg {
+  rotate: 90deg;
+  width: 1.5em;
+}
+.PassButton div:hover {
+  background-color: #ABC4FF;
+}
+.PassButton div:hover div {
+  background-color: #ABC4FF;
+}
+.PassButton .PassButtonNext {
+  transform: translateX(100%);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #1b1d22;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #1b1d22;
+  }
+}
+/* The slide Down animation effect */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes nonExistent {
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes QCManswershowup {
+  0% {
+    opacity: 0;
+    right: 100%;
+  }
+  50% {
+    opacity: 0;
+    right: 100%;
+  }
+  100% {
+    opacity: 1;
+    right: 20%;
+  }
+}
+@keyframes QCMbeat {
+  0% {
+    transform: scale(1);
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes QCMslideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes ResultPagePop {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(6deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes PopIn {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes StarPopIn {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  80% {
+    transform: scale(1.5) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes StarPopInColorChange {
+  0% {
+    fill: white;
+  }
+  80% {
+    fill: rgb(255, 220, 105);
+  }
+  100% {
+    fill: white;
+  }
+}
+@keyframes ResultPagePopSubpage {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Apply the animation to an element */
+.result-page {
+  animation: ResultPagePop 0.3s ease-in-out;
+}
+
+@keyframes HintSlideIn {
+  0% {
+    -webkit-filter: drop-shadow(0 0 30px #cab812);
+    filter: drop-shadow(0 0 30px #ddbe0e);
+    color: #e6dca8;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 0 30px #cab812);
+    filter: drop-shadow(0 0 30px #ddbe0e);
+    color: #e6dca8;
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 30px #cab812);
+    filter: drop-shadow(0 0 30px #ddbe0e);
+    color: #e6dca8;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.slideDown {
+  animation: slideDown ease 1 200ms;
+}
+
+.slideRight {
+  animation: slideRight ease 1 200ms;
+}
+
+.slideUp {
+  animation: slideUp ease 1 200ms;
+}
+
+textarea {
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  #pomme {
+    background-color: blue !important;
+  }
+  .spaced {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  h1 {
+    font-size: 2.1em !important;
+  }
+  #introsection h1:nth-child(1) {
+    margin-bottom: 5vh;
+  }
+  #videointrosection {
+    flex-direction: column;
+  }
+  #videointrosection video {
+    width: 80% !important;
+  }
+  #loading {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+  #learnCourse {
+    width: 96vw;
+    font-size: 0.75em !important;
+  }
+  .settings {
+    flex-direction: column;
+  }
+  #header div:nth-child(2) ul {
+    display: none;
+  }
+  .hamburgerMenuOn {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .hamburgerMenuOff {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  #hamburgerMenu {
+    transition: all ease 200ms;
+    animation: slideRight ease 200ms;
+    z-index: 3;
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: none;
+  }
+  #hamburgerMenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+    list-style: none;
+  }
+  #header div:nth-child(3) {
+    display: flex !important;
+    cursor: pointer;
+  }
+  #header div:nth-child(3) svg {
+    transform: scale(1.1);
+  }
+  #header div:nth-child(3) svg:hover {
+    transform: scale(1.2);
+  }
+  #coursebot {
+    font-size: 0.75em !important;
+    right: 2vw !important;
+    width: 88vw !important;
+  }
+  #coursebot div:nth-child(1) div:nth-child(1) svg:nth-child(1) {
+    display: none;
+  }
+  @keyframes QCManswershowup {
+    0% {
+      opacity: 0;
+      right: 100%;
+      transform: translateX(-80px);
+    }
+    50% {
+      opacity: 0;
+      right: 100%;
+      transform: translateX(-80px);
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+      right: 20%;
+    }
+  }
+  .QCM .QCMhintOn {
+    margin-right: 2vw !important;
+    margin-left: 2vw !important;
+  }
+  .QCM .QCMhintOff {
+    margin-right: 2vw !important;
+    margin-left: 2vw !important;
+  }
+  .QCM .QCMintrosection {
+    margin-right: 2vw !important;
+    margin-left: 2vw !important;
+  }
+  .QCM h1 {
+    margin-right: 2vw !important;
+    margin-left: 2vw !important;
+  }
+  .QCM .QCMquestionpart {
+    margin-right: 2vw !important;
+    margin-left: 2vw !important;
+    max-width: 100% !important;
+  }
+  .QCM .QCMquestionpart .QCMshowwronganswer {
+    right: 5% !important;
+  }
+  .QCM .QCMquestionpart div h3 {
+    font-size: 0.75em !important;
+    overflow-y: scroll;
+  }
+  .QCM .QCManswerpart {
+    margin-right: 2vw !important;
+    margin-left: 2vw !important;
+  }
+  .QCM .QCManswerpart p {
+    font-size: 1em !important;
+    max-height: 25vh;
+    overflow-y: scroll;
+  }
+  .QCM .QCManswerpart div {
+    height: 10vh !important;
+  }
+  .QCM .QCManswerpart div div {
+    width: 6em !important;
+    justify-content: center;
+  }
+  .QCM .QCManswerpart div div h4 {
+    display: none !important;
+  }
+  .QCM .QCManswerpart .QCMnext {
+    left: calc(96vw - 6em) !important;
+  }
+  .ExerciseResultPage .ExerciseResultPageRounddiv div:nth-child(2) {
+    border-radius: 40vw !important;
+  }
+  .ExerciseResultPage .ExerciseResultPageAward {
+    top: 20vh !important;
+  }
+  .ExerciseResultPage .ExerciseResultPageAward svg {
+    width: 14em !important;
+    height: 14em !important;
+  }
+  .ExerciseResultPage .ExerciseResultPageAward h3 {
+    font-size: 2.1em !important;
+    left: 44vw !important;
+    top: 5cqmin !important;
+  }
+  .ExerciseResultPage .ExerciseResultPageAward:hover {
+    transform: scale(1.1);
+  }
+  .ExerciseResultPage .ExerciseResultPageAward:active {
+    transform: scale(0.9) rotate(12deg);
+  }
+  .ExerciseResultPage .ExerciseResultPageAward:active svg path {
+    fill: rgb(255, 220, 105);
+  }
+  .ExerciseResultPage .ExerciseResultPageSubpage {
+    margin-right: 2vw !important;
+    margin-left: 2vw !important;
+  }
+  .ExerciseResultPage .ExerciseResultPageSubpage div div h4 {
+    display: none !important;
+  }
+  .ExerciseResultPage .ExerciseResultPageSubpage div div svg {
+    margin-left: 5vw;
+  }
+  .QuestionResultPage .QuestionResultPageGrade {
+    width: 80% !important;
+    border-radius: 20px;
+    font-size: 2.1em !important;
+  }
+  .QuestionResultPage .QuestionResultPageStarsContainer {
+    width: calc(18rem + 15vw) !important;
+  }
+  .QuestionResultPage .QuestionResultPageContainer {
+    height: fit-content;
+    margin-top: 10vh;
+    width: calc(18rem + 15vw) !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0px !important;
+  }
+  .QuestionResultPage .QuestionResultPageContainer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .QuestionResultPage .QuestionResultPageSectionOpen {
+    width: calc(18rem + 13vw) !important;
+    height: fit-content;
+    padding: 5vw 1vw !important;
+    transform: translateY(-7vw) !important;
+    border: 1px solid white;
+    z-index: 1;
+    transition: all ease 200ms;
+    border-radius: 0 0 20px 20px;
+  }
+  .QuestionResultPage .QuestionResultPageSectionClosed {
+    width: calc(18rem + 15vw) !important;
+    height: 0;
+    overflow-y: hidden;
+    transform: translateY(-5.2vh);
+    border: 1px solid white;
+    border-radius: 0 0 20px 20px;
+    z-index: 1;
+    transition: all ease 200ms;
+  }
+  .Question .NewQuestionContext {
+    font-size: 1em !important;
+  }
+  .Question .NewQuestionQuestion {
+    font-size: 1.333em !important;
+  }
+  @keyframes slideDownQuestionAnswer {
+    0% {
+      margin-top: 0vh;
+      opacity: 0;
+    }
+    50% {
+      margin-top: 0vh;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 15vh;
+      opacity: 1;
+    }
+  }
+  .Question .NewQuestionAnswerpart textarea {
+    font-size: 1em !important;
+  }
+  .Exerciseboxopen {
+    margin: 0 !important;
+  }
+  .ConnexionSectionWarningMessage {
+    font-size: 0.75em !important;
+  }
+  .PersonalPage .PersonalPageBanner div {
+    bottom: -2.5em !important;
+  }
+  .PersonalPage .PersonalPageQuote .PersonalPageQuoteContent p {
+    font-size: 1em !important;
+  }
+  .PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBox {
+    font-size: min(0.75em, 10vw) !important;
+  }
+  .PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageSmallBox {
+    width: 30% !important;
+    margin: 0.5%;
+  }
+  .PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageMediumBox {
+    width: 40% !important;
+    margin: 0.5%;
+  }
+  .PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBigBox {
+    width: 45% !important;
+    margin: 0.5%;
+  }
+}
+.PersonalSectionExitButton {
+  width: 2em !important;
+  bottom: -1.4em !important;
+}
+
+.warningBackground {
+  background-color: #1b1d22;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+}
+
+.backgroundColorWarning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  z-index: 3;
+  color: black;
+  background-color: white;
+  position: fixed;
+  width: 40vw;
+  height: 70vh;
+  left: 25vw;
+  top: 15vh;
+  border-radius: 0 0 50px 50px;
+  transition: all ease 200ms;
+  animation: slideRight ease 800ms;
+}
+.backgroundColorWarning .closeButton {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 2em;
+  height: 2em;
+  transition: all ease 200ms;
+  cursor: pointer;
+}
+.backgroundColorWarning .closeButton:hover {
+  transform: rotate(12deg) scale(1.1);
+}
+.backgroundColorWarning div:nth-child(1) {
+  background-color: #1b1d22;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.backgroundColorWarning div:nth-child(1) svg {
+  background-color: #1b1d22;
+  color: white;
+  width: 2em;
+  height: 2em;
+}
+.backgroundColorWarning p {
+  width: 30vw;
+  text-align: center;
+}
+
+.QCM {
+  min-width: 100vw;
+  position: absolute;
+  top: 0;
+  height: fit-content;
+  min-height: 100vh;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  background-color: #1b1d22;
+  color: white;
+  color: linear-gradient(177deg, rgb(255, 255, 255) 0%, rgb(172, 214, 225) 100%);
+}
+.QCM .QCMhintbulbon {
+  -webkit-filter: drop-shadow(0 0 30px #cab812);
+  filter: drop-shadow(0 0 30px #ddbe0e);
+  color: #e6dca8;
+}
+.QCM .QCMhintOn {
+  margin-right: 20vw;
+  margin-left: 20vw;
+  animation: HintSlideIn ease 600ms;
+}
+.QCM .QCMhintOff {
+  margin-right: 20vw;
+  margin-left: 20vw;
+  display: none;
+}
+.QCM .QCMintrosection {
+  margin-right: 20vw;
+  margin-left: 20vw;
+  display: flex;
+  justify-content: space-between;
+}
+.QCM .QCMintrosection svg {
+  width: calc(2em + 2vw);
+  transition: all ease 600ms;
+  cursor: pointer;
+}
+.QCM .QCMintrosection svg:hover {
+  -webkit-filter: drop-shadow(0 0 30px #cab812);
+  filter: drop-shadow(0 0 30px #ddbe0e);
+  color: #e6dca8;
+}
+.QCM .QCMintrosection h3 {
+  font-family: InterExtraLight;
+}
+.QCM .QCMintrosection .score {
+  font-size: 1.333em;
+  font-family: BakBakOne;
+  transform: rotate(20deg);
+}
+.QCM h1 {
+  font-size: calc(1em + 2vw);
+  margin-right: 20vw;
+  margin-left: 20vw;
+  text-align: center;
+}
+.QCM h1 span {
+  color: #C1D3FE;
+}
+.QCM .QCMquestionpart {
+  position: relative;
+  display: flex;
+  height: fit-content;
+  flex-wrap: wrap;
+  margin-right: 20vw;
+  margin-left: 20vw;
+  max-width: 60vw;
+  justify-content: start;
+  text-align: center;
+}
+.QCM .QCMquestionpart .QCMhideanswer {
+  transition: all ease 300ms;
+  position: absolute;
+  right: 0%;
+  display: none;
+  opacity: 0;
+}
+.QCM .QCMquestionpart .QCMshowanswer {
+  z-index: -1;
+  transition: all ease 300ms 1s;
+  display: block;
+  position: absolute;
+  right: 20%;
+  font-size: 3em;
+  animation: QCManswershowup ease 1s 1 0s;
+  color: inherit;
+  -webkit-text-stroke: 1px #a7fb8d; /* Text stroke */
+  text-transform: uppercase;
+}
+.QCM .QCMquestionpart .QCMshowwronganswer {
+  z-index: -1;
+  transition: all ease 300ms 1s;
+  display: block;
+  position: absolute;
+  right: 20%;
+  font-size: 3em;
+  animation: QCManswershowup ease 1s 1 0s;
+  color: inherit;
+  -webkit-text-stroke: 1px #fb9c8d; /* Text stroke */
+  text-transform: uppercase;
+}
+.QCM .QCMquestionpart div {
+  cursor: pointer;
+  z-index: 2;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  width: 40%;
+  height: calc(10vh + 4em);
+  border-radius: 20px;
+  margin: 2%;
+  color: #1b1d22;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  animation: slideDown 200ms ease;
+  transition: height 200ms ease 200ms, opacity 200ms ease 0s, width 200ms ease 200ms, margin 200ms ease 0s, transform 200ms ease 0s;
+}
+.QCM .QCMquestionpart div.QCMhidechoice {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin: 0;
+}
+.QCM .QCMquestionpart .QCMshowgoodchoice {
+  z-index: 2;
+  margin: 0;
+  background: linear-gradient(180deg, #1b1d22 20%, #1b1d22 0%, rgba(167, 251, 141, 0.459) 100%);
+  animation: QCMbeat ease 400ms 1;
+  border-radius: 0;
+}
+.QCM .QCMquestionpart .QCMshowwrongchoice {
+  z-index: 2;
+  margin: 0;
+  background: linear-gradient(180deg, #1b1d22 20%, #1b1d22 0%, rgba(251, 156, 141, 0.5764705882) 100%);
+  animation: QCMbeat ease 400ms 1;
+  border-radius: 0;
+}
+.QCM .QCManswerpart {
+  margin-right: 20vw;
+  margin-left: 20vw;
+  margin-top: 5vh;
+}
+.QCM .QCManswerpart p {
+  font-size: 1.333em;
+  font-family: InterLight;
+  animation: QCMslideUp ease 1s 1;
+}
+.QCM .QCManswerpart div {
+  width: 100%;
+  height: 8vh;
+  background: #434853;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.QCM .QCManswerpart div div {
+  background-color: white;
+  height: 100%;
+  width: 20vw;
+  display: flex;
+  gap: 5vw;
+  transition: all ease 200ms;
+  position: absolute;
+  left: 0;
+}
+.QCM .QCManswerpart div div h4 {
+  margin-left: 2vw;
+  color: #1b1d22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-family: InterBold;
+  font-size: 1.333em;
+  position: relative;
+  transition: all ease 200ms;
+}
+.QCM .QCManswerpart div div svg {
+  transform: rotate(90deg) translateY(0px);
+  transition: all ease 200ms;
+  color: #1b1d22;
+  width: 2em;
+}
+.QCM .QCManswerpart div div:hover {
+  background-color: rgb(218, 218, 218);
+}
+.QCM .QCManswerpart div div:hover svg {
+  transform: rotate(90deg) translateY(-20px);
+}
+.QCM .QCManswerpart div div:hover h4 {
+  transform: translateX(20px);
+}
+.QCM .QCManswerpart .QCMnext {
+  left: 40vw;
+}
+
+.QCMoff {
+  display: none;
+}
+
+.QuestionContainer {
+  position: absolute;
+  top: 0;
+  background-color: #1b1d22;
+  min-height: 100vh;
+  height: fit-content;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Question {
+  width: 40vw;
+  min-width: 320px;
+  background-color: red;
+  height: fit-content;
+  min-height: 100vh;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  background-color: #1b1d22;
+  color: white;
+  color: linear-gradient(177deg, rgb(255, 255, 255) 0%, rgb(172, 214, 225) 100%);
+  display: flex;
+  flex-direction: column;
+}
+.Question h3:nth-child(1) {
+  font-size: 1.333em;
+  font-family: InterExtraLight;
+  letter-spacing: 2px;
+}
+@keyframes slideUpQuestionQuestion {
+  0% {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(10%);
+    opacity: 1;
+  }
+}
+.Question .NewQuestionContext {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(150, 150, 150) 0%, rgb(0, 0, 0) 63%);
+  width: 100%;
+  min-height: 30vh;
+  height: fit-content;
+  border-radius: 20px;
+  font-size: 1em;
+  font-family: InterExtraLight;
+  animation: slideUpQuestionQuestion ease-out 500ms 1;
+  transform: translateY(10%);
+  z-index: 1;
+}
+.Question .NewQuestionContext img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  opacity: 0.2;
+  top: 0%;
+  object-fit: cover;
+}
+.Question .NewQuestionContext p {
+  margin: 2%;
+  width: 60%;
+}
+.Question .NewQuestionQuestion {
+  word-wrap: break-word;
+  animation: PopIn ease 200ms 1;
+  border: 2px solid white;
+  width: 100%;
+  background-color: #1b1d22;
+  height: fit-content;
+  border-radius: 20px;
+  font-size: 1.333em;
+  font-family: InterBold;
+  z-index: 1;
+}
+.Question .NewQuestionQuestion p {
+  margin: 5%;
+}
+@keyframes slideDownQuestionAnswer {
+  0% {
+    margin-top: 0vh;
+    opacity: 0;
+  }
+  50% {
+    margin-top: 0vh;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 15vh;
+    opacity: 1;
+  }
+}
+.Question .NewQuestionAnswerpart {
+  animation: slideDownQuestionAnswer ease 800ms 1;
+  margin-top: 15vh;
+  padding-bottom: 5vh;
+  min-height: 50vh;
+  height: fit-content;
+  border: 1px white solid;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.Question .NewQuestionAnswerpart textarea {
+  margin: 2%;
+  height: 40vh;
+  width: 80%;
+  max-width: 90%;
+  background-color: #1b1d22;
+  border: none;
+  font-family: Inter;
+  font-size: 1.333em;
+  color: white;
+}
+.Question .NewQuestionAnswerpart div {
+  background-color: #434853;
+  width: 50%;
+  border-radius: 20px;
+  color: #1b1d22;
+  align-self: center;
+}
+.Question .NewQuestionAnswerpart div div {
+  background-color: #D7D8DA;
+  width: fit-content;
+  padding: 0 5%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: all ease 200ms;
+}
+.Question .NewQuestionAnswerpart div div svg {
+  width: 1em;
+  transform: rotate(90deg);
+}
+.Question .NewQuestionAnswerpart div div:hover {
+  transform: translateX(20%);
+}
+
+.QuestionResultPage {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  height: fit-content;
+  min-height: 100vh;
+  padding-bottom: 5vw;
+  background-color: #1b1d22;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.QuestionResultPage .QuestionResultPageBanner {
+  height: 12vw;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(360deg, rgb(255, 255, 255) 0%, rgb(181, 202, 247) 88%);
+  width: 100%;
+}
+.QuestionResultPage h1 {
+  width: calc(20rem + 20vw);
+  font-size: 4.49em;
+  text-align: center;
+  animation: slideUp ease 200ms 1;
+}
+.QuestionResultPage .QuestionResultPageGrade {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(360deg, rgb(255, 255, 255) 0%, rgb(181, 202, 247) 78%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  width: calc(20rem + 20vw);
+  margin-bottom: 2vh;
+  font-size: 3.157em;
+  color: #1b1d22;
+  font-family: InterBold;
+  animation: PopIn ease 500ms 1;
+}
+.QuestionResultPage .QuestionResultPageStarsContainer {
+  width: calc(20rem + 20vw);
+  display: flex;
+  justify-content: space-between;
+  animation: PopIn ease 500ms 1;
+}
+.QuestionResultPage .QuestionResultPageStarsContainer svg {
+  animation: StarPopIn ease 400ms 1;
+  color: white;
+  transition: all ease 200ms;
+}
+.QuestionResultPage .QuestionResultPageStarsContainer svg path {
+  fill: white;
+  transition: all ease 200ms;
+  animation: StarPopInColorChange ease 400ms 1;
+}
+.QuestionResultPage .QuestionResultPageStarsContainer svg:hover {
+  transform: scale(1.2);
+}
+.QuestionResultPage .QuestionResultPageStarsContainer svg:hover path {
+  fill: rgb(255, 220, 105);
+}
+.QuestionResultPage .QuestionResultPageContainer {
+  height: fit-content;
+  margin-top: 10vh;
+  width: calc(20rem + 20vw);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.QuestionResultPage .QuestionResultPageContainer div {
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px white solid;
+  height: 8vh;
+  padding: 1vw;
+  transition: all ease 200ms;
+  animation: slideDown ease 200ms 1;
+  z-index: 2;
+  background-color: #1b1d22;
+}
+.QuestionResultPage .QuestionResultPageContainer div:hover {
+  background-color: white;
+  color: #1b1d22;
+  transform: scale(1.02);
+}
+.QuestionResultPage .QuestionResultPageContainer .QuestionResultPageSectionSelected {
+  background-color: white;
+  color: #1b1d22;
+  transform: scale(1.03);
+}
+.QuestionResultPage .QuestionResultPageSectionOpen {
+  width: calc(20rem + 18vw);
+  height: fit-content;
+  padding: 2vw 1vw;
+  transform: translateY(-3.6vh);
+  border: 1px solid white;
+  z-index: 1;
+  transition: all ease 200ms;
+  border-radius: 0 0 20px 20px;
+}
+.QuestionResultPage .QuestionResultPageSectionClosed {
+  width: calc(20rem + 18vw);
+  height: 0;
+  overflow-y: hidden;
+  transform: translateY(-4.2vh);
+  border: 1px solid white;
+  padding: 0vw 0vw;
+  border-radius: 0 0 20px 20px;
+  z-index: 1;
+  transition: all ease 200ms;
+}
+
+.ExerciseResultPage {
+  min-width: 100vw;
+  position: absolute;
+  top: 0;
+  height: fit-content;
+  min-height: 100vh;
+  padding-bottom: 5vw;
+  background-color: #1b1d22;
+  color: white;
+  color: linear-gradient(177deg, rgb(255, 255, 255) 20%, rgb(172, 214, 225) 100%);
+}
+.ExerciseResultPage .ExerciseResultPageRounddiv {
+  transform: translateY(-70vh);
+}
+.ExerciseResultPage .ExerciseResultPageRounddiv div:nth-child(2) {
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 50%, rgb(181, 202, 247) 100%);
+  border-radius: 40%;
+}
+.ExerciseResultPage .ExerciseResultPageAward {
+  animation: ResultPagePop 0.5s ease;
+  position: absolute;
+  top: 15vh;
+  height: fit-content;
+  width: 100vw;
+  transition: all ease 200ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ExerciseResultPage .ExerciseResultPageAward svg {
+  width: 30vw;
+  height: 20vw;
+  left: 35vw;
+}
+.ExerciseResultPage .ExerciseResultPageAward svg path {
+  transition: all ease 200ms;
+}
+.ExerciseResultPage .ExerciseResultPageAward h3 {
+  font-size: 3.157em;
+  left: 48vw;
+  color: #1b1d22;
+  position: absolute;
+  top: 5vh;
+}
+.ExerciseResultPage .ExerciseResultPageAward h3 span {
+  color: #ABC4FF;
+}
+.ExerciseResultPage .ExerciseResultPageAward:hover {
+  transform: scale(1.1);
+}
+.ExerciseResultPage .ExerciseResultPageAward:active {
+  transform: scale(0.9) rotate(12deg);
+}
+.ExerciseResultPage .ExerciseResultPageAward:active svg path {
+  fill: rgb(255, 220, 105);
+}
+.ExerciseResultPage .ExerciseResultPageSubpage {
+  animation: ResultPagePopSubpage 2s ease 1;
+  transform: translateY(-40vh);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20vw;
+  margin-left: 20vw;
+}
+.ExerciseResultPage .ExerciseResultPageSubpage svg {
+  width: 2em;
+}
+.ExerciseResultPage .ExerciseResultPageSubpage div {
+  width: 60%;
+  height: 8vh;
+  background: #434853;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.ExerciseResultPage .ExerciseResultPageSubpage div div {
+  background-color: white;
+  height: 100%;
+  width: 20vw;
+  display: flex;
+  gap: 5vw;
+  transition: all ease 200ms;
+  position: absolute;
+  left: 0;
+}
+.ExerciseResultPage .ExerciseResultPageSubpage div div h4 {
+  margin-left: 2vw;
+  color: #1b1d22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-family: InterBold;
+  font-size: 1.333em;
+  position: relative;
+  transition: all ease 200ms;
+}
+.ExerciseResultPage .ExerciseResultPageSubpage div div svg {
+  transform: rotate(90deg) translateY(0px);
+  transition: all ease 200ms;
+  color: #1b1d22;
+  width: 2em;
+}
+.ExerciseResultPage .ExerciseResultPageSubpage div div:hover {
+  background-color: rgb(218, 218, 218);
+}
+.ExerciseResultPage .ExerciseResultPageSubpage div div:hover svg {
+  transform: rotate(90deg) translateY(-20px);
+}
+.ExerciseResultPage .ExerciseResultPageSubpage div div:hover h4 {
+  transform: translateX(20px);
+}
+.ExerciseResultPage .ExerciseResultPageSubpage .QCMnext {
+  left: calc(100% - 20vw);
+}
+
+.ResultPageOff {
+  opacity: 0;
+}
+
+.ConnexionSection {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./assets/backdrop.jpg);
+  background-size: cover;
+}
+.ConnexionSection .ConnexionSectionCoverImg {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0.2;
+}
+
+.ConnexionSectionForm {
+  animation: slideUp ease 500ms;
+  background-color: rgba(255, 255, 255, 0.356);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px white solid;
+  border-radius: 20px;
+  padding: 2vw;
+  min-width: 320px;
+  width: 25vw;
+}
+.ConnexionSectionForm h1 {
+  color: white;
+  font-family: BakBakOne;
+}
+.ConnexionSectionForm form {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.ConnexionSectionForm form .ConnexionSectionInput {
+  width: 50%;
+  margin-top: 3%;
+  height: 6vh;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 40px;
+  border: 1px solid white;
+  color: white;
+  padding-left: 10%;
+  position: relative;
+  transition: all ease 200ms;
+}
+.ConnexionSectionForm form .ConnexionSectionInput svg {
+  position: absolute;
+  right: 5%;
+  width: 1em;
+  top: 22%;
+}
+.ConnexionSectionForm form .ConnexionSectionInput input {
+  width: 80%;
+  height: 98%;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+.ConnexionSectionForm form .ConnexionSectionInput input:focus {
+  outline: none;
+}
+.ConnexionSectionForm form .ConnexionSectionInput input::placeholder {
+  color: white;
+  font-family: InterLight;
+}
+.ConnexionSectionForm form .ConnexionSectionInput:hover {
+  filter: drop-shadow(1px 11px 4px rgba(0, 0, 0, 0.0901960784));
+  background-color: rgba(255, 255, 255, 0.322);
+  color: black;
+  transform: translateY(-5%);
+}
+.ConnexionSectionForm form button {
+  height: 6vh;
+  margin-top: 3%;
+  border-radius: 40px;
+  border: 0px solid white;
+  color: #1b1d22;
+  width: 60%;
+  font-family: InterBold;
+  transition: all ease 200ms;
+}
+.ConnexionSectionForm form button:hover {
+  background-color: #ABC4FF;
+  color: white;
+  border: 3px solid white;
+}
+.ConnexionSectionForm form button:focus {
+  outline: none;
+  border: 2px solid white;
+}
+.ConnexionSectionForm form h4 {
+  color: white;
+  font-family: Inter;
+  font-weight: normal;
+}
+.ConnexionSectionForm form h4 span {
+  font-family: InterBold;
+}
+.ConnexionSectionForm .ConnexionSectionWarningMessage {
+  font-size: 1em;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 200ms;
+}
+.ConnexionSectionForm .ConnexionSectionWarningMessage p {
+  text-align: center;
+  max-width: 80%;
+  color: #A10000;
+  font-family: InterBold;
+}
+.ConnexionSectionForm .ConnexionSectionWarningMessageOn {
+  height: fit-content;
+}
+.ConnexionSectionForm .ConnexionSectionWarningMessageOff {
+  height: 0;
+}
+
+.PersonalPage {
+  animation: slideRight ease 300ms 1;
+  height: 100vh;
+  width: 100vw;
+  color: #1b1d22;
+}
+.PersonalPage .PersonalPageBanner {
+  position: relative;
+  height: 20vh;
+  background-image: url(./assets/backdrop.jpg);
+  background-size: cover;
+}
+.PersonalPage .PersonalPageBanner div {
+  position: absolute;
+  bottom: -3.5em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.PersonalPage .PersonalPageBanner div img {
+  width: 100px;
+  height: 100px;
+  margin: 0% 4%;
+  border-radius: 50%;
+}
+.PersonalPage .PersonalPageQuote {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.PersonalPage .PersonalPageQuote .PersonalPageQuoteContent {
+  margin-top: 12vh;
+  margin-bottom: 4vh;
+  min-width: 320px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  align-items: center;
+}
+.PersonalPage .PersonalPageQuote .PersonalPageQuoteContent p {
+  font-size: 1.333em;
+  margin: 0% 5%;
+}
+.PersonalPage .PersonalPageQuote .PersonalPageQuoteContent div {
+  min-width: 2em;
+  height: 2em;
+  transition: all ease 200ms;
+  cursor: pointer;
+}
+.PersonalPage .PersonalPageQuote .PersonalPageQuoteContent div svg {
+  transform: rotate(90deg);
+}
+.PersonalPage .PersonalPageQuote .PersonalPageQuoteContent div:hover {
+  transform: scale(1.1);
+}
+.PersonalPage .PersonalPageQuote .PersonalPageQuoteContent div:active {
+  transform: scale(1.5);
+}
+.PersonalPage .PersonalPageBoxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 320px;
+  width: 60%;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalSectionBoxDeleteButton {
+  border: solid 2px rgba(0, 0, 0, 0);
+  position: absolute;
+  top: -1.5em;
+  left: 0;
+  border-radius: 20px 20px 0 0;
+  width: 98%;
+  height: 2em;
+  transition: all ease 200ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  z-index: 0;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalSectionBoxDeleteButton svg {
+  transition: all ease 200ms;
+  width: 2em;
+  opacity: 0.02;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalSectionBoxDeleteButton:hover svg {
+  width: 2em;
+  opacity: 1;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBox {
+  transition: all ease 200ms;
+  height: 20vh;
+  width: fit-content;
+  border-radius: 20px;
+  font-family: InterExtraLight;
+  font-size: min(1em, 10vw);
+  display: flex;
+  color: white;
+  position: relative;
+  justify-content: flex-start;
+  align-items: flex-end;
+  word-wrap: break-word;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBox img {
+  border-radius: 20px;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale the image as large as possible while maintaining its aspect ratio and cropping the excess */
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBox .PersonalPageBoxCover {
+  border-radius: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: all ease 200ms;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBox p:nth-child(3) {
+  transition: all ease 200ms;
+  opacity: 1;
+  margin-left: 5%;
+  font-family: InterBold;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBox p:nth-child(4) {
+  transition: all ease 200ms;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  opacity: 0;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageSmallBox {
+  width: 20%;
+  margin: 2% 0.5%;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageMediumBox {
+  width: 30%;
+  margin: 2% 0.5%;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBigBox {
+  width: 40%;
+  margin: 2% 0.5%;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBox:hover {
+  cursor: pointer;
+  transform: translateY(-1%);
+  filter: drop-shadow(1px 11px 4px rgba(0, 0, 0, 0.0901960784));
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBox:hover .PersonalPageBoxCover {
+  opacity: 0.2;
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBox:hover p:nth-child(3) {
+  transform: translateY(-40%);
+}
+.PersonalPage .PersonalPageBoxContainer .PersonalPageBoxContentContainer .PersonalPageBox:hover p:nth-child(4) {
+  opacity: 1;
+}
+
+.ThemeSectionSticker {
+  position: relative;
+}
+
+.PersonalSection {
+  transition: all ease 200ms;
+  animation: slideRight ease 400ms 1;
+  background-color: white;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  color: #1b1d22;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.PersonalSection .PersonalSectionHeader {
+  height: 200px;
+  width: 100%;
+  z-index: 0;
+  bottom: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PersonalSection .PersonalSectionHeader img {
+  z-index: -1;
+  margin-top: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.5;
+}
+.PersonalSection .PersonalSectionHeader h1 {
+  position: absolute;
+  bottom: -1.2em;
+}
+.PersonalSection .PersonalSectionHeader .PersonalSectionExitButton {
+  transition: all ease 200ms;
+  position: absolute;
+  bottom: -1em;
+  width: 3em;
+  height: 3em;
+  right: 10%;
+  cursor: pointer;
+}
+.PersonalSection .PersonalSectionHeader .PersonalSectionExitButton path {
+  transition: all ease 200ms;
+}
+.PersonalSection .PersonalSectionHeader .PersonalSectionExitButton:hover {
+  transform: scale(1.1);
+}
+.PersonalSection .PersonalSectionHeader .PersonalSectionExitButton:hover path:nth-child(1) {
+  fill: #A10000;
+}
+.PersonalSection .PersonalSectionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10vh;
+  min-width: 320px;
+  width: 50vw;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionBox {
+  margin: 3%;
+  height: 18vh;
+  max-height: 12em;
+  transition: all ease 200ms;
+  background-color: white;
+  border-radius: 10px;
+  border: solid black 2px;
+  width: 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionBox svg {
+  width: 3em;
+  height: 3em;
+  top: -10%;
+  right: -10%;
+  position: absolute;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionBox h4 {
+  font-size: 1.333em;
+  font-family: InterBold;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionBox h5 {
+  font-size: 1em;
+  font-family: InterLight;
+  transition: all ease 200ms;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionBox:hover {
+  filter: drop-shadow(1px 11px 4px rgba(0, 0, 0, 0.0901960784));
+  transform: translateY(-10%);
+  background-color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionMore {
+  margin: 3% 0.5%;
+  height: 18vh;
+  max-height: 12em;
+  transition: all ease 200ms;
+  background-color: rgb(250, 249, 249);
+  border-radius: 10px;
+  width: 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionMore svg {
+  width: 4em;
+  height: 4em;
+  transition: all ease 200ms;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionMore svg path {
+  fill: #1b1d22;
+  transition: all ease 200ms;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionMore:hover {
+  background-color: #1b1d22;
+  color: white;
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionMore:hover svg {
+  transform: scale(1.2);
+}
+.PersonalSection .PersonalSectionContainer .PersonalSectionBoxContainer .PersonalSectionMore:hover svg path {
+  fill: white;
+}
+
+.PersonalSectionIsLeaving {
+  transform: translateX(40%);
+  opacity: 0;
+}
+
+.PersonalSectionExerciseSticker {
+  position: sticky;
+  height: fit-content;
+  z-index: 2;
+  background-color: black;
+  width: 100vw;
+  opacity: 1;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+select {
+  font-size: 1em;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  color: inherit;
+  transition: all ease 0.2s;
+  font-size: 1em;
+}
+
+a:hover {
+  color: #ABC4FF;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.157em;
+  font-family: "Inter";
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+#header {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  box-shadow: 2px 3px 11px 5px rgba(0, 0, 0, 0.1);
+}
+#header ul svg:hover path {
+  fill: #ABC4FF;
+}
+#header ul {
+  display: flex;
+  list-style: none;
+  font-family: "BakBakOne";
+}
+#header ul svg {
+  margin-left: 2em;
+}
+#header ul svg path {
+  transition: all ease 200ms;
+}
+#header ul li {
+  margin-left: 2em;
+  transition: border ease 100ms;
+}
+#header div:nth-child(3) {
+  display: none;
+}
+
+.headerUnderline {
+  border-bottom: 2px solid black;
+}
+.headerUnderline:hover {
+  border-bottom: 2px solid #ABC4FF;
+}
+
+#logoSection {
+  display: flex;
+  flex-direction: row;
+  transition: all ease-out 400ms;
+}
+#logoSection svg {
+  transform: translateY(50%);
+}
+#logoSection svg path {
+  transition: all ease 400ms;
+}
+#logoSection:hover svg path {
+  transform: scale(1.03);
+  fill: #ABC4FF;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20vw;
+  padding: 5vh 0;
+}
+
+#learnformula {
+  margin-top: 25%;
+  margin-bottom: 10vw;
+  text-align: center;
+}
+#learnformula label input {
+  outline: none;
+}
+
+#learnCourse {
+  font-family: "Roboto";
+  font-size: 1.333em;
+}
+#learnCourse h3 {
+  font-family: "Inter";
+}
+
+.course {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.courseList {
+  display: flex;
+  flex-wrap: wrap;
+  animation: slideDown ease 1 200ms;
+}
+.courseList p {
+  background-color: inherit;
+  padding: calc(0.2em + 1vw);
+  border: 2px solid #1b1d22;
+  border-radius: 15px;
+  margin-right: 1vw;
+  transition: all ease 100ms;
+}
+.courseList p:hover {
+  background-color: #1b1d22;
+  color: white;
+}
+
+.smallcourse {
+  animation: slideDown ease 1 200ms;
+}
+.smallcourse h2 {
+  background-color: inherit;
+  padding: calc(0.2em + 1vw);
+  border: 2px solid #1b1d22;
+  border-radius: 15px;
+  margin-right: 1vw;
+  transition: all ease 100ms;
+  background-color: #1b1d22;
+  color: white;
+  text-align: center;
+}
+.smallcourse p {
+  border: none;
+}
+.smallcourse p:hover {
+  background-color: white;
+  color: #1b1d22;
+}
+
+#spinnerCoursegeneration {
+  transform: translateY(-1vw);
+  margin: 0vw;
+  background-color: #1b1d22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  height: fit-content;
+  padding: 0.5vw;
+  border-radius: 15px;
+}
+
+#learnCourseHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#learnCourseHeader img {
+  height: 40vh;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+#introsection {
+  margin-top: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#introsection h1 {
+  text-align: center;
+}
+#introsection div:hover {
+  scale: 1.05;
+}
+#introsection div {
+  transition: all ease 200ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 40vh;
+  background-color: #1b1d22;
+  border-radius: 25px;
+  background-image: url(./assets/backdrop.jpg);
+  background-size: cover;
+  animation: slideFromRight 1s ease-out;
+  position: relative;
+}
+#introsection div .octagonTag {
+  position: absolute;
+  top: -10%;
+  right: -2%;
+  width: 70px;
+  height: 70px;
+  background: #ABC4FF;
+  clip-path: polygon(50% 0%, 53.396 0.281, 56.756 1.123, 60.048 2.516, 63.251 4.449, 66.342 6.92, 69.298 9.925, 72.098 13.458, 74.722 17.508, 77.148 22.06, 79.355 27.097, 81.318 32.601, 83.017 38.55, 84.431 44.922, 85.541 51.687, 86.331 58.812, 86.79 66.264, 86.909 74, 86.684 81.979, 86.111 90.146, 85.189 98.449, 83.918 106.831, 82.301 115.238, 80.342 123.61, 78.046 131.888, 75.419 139.998, 72.469 147.874, 69.204 155.449, 65.636 162.656, 61.774 169.427, 57.632 175.698, 53.222 181.408, 48.56 186.497, 43.663 190.91, 38.548 194.597, 33.233 197.517, 27.738 199.639, 22.085 200.938, 16.296 201.397, 10.395 201.007, 4.405 199.763, -1.595 197.666, -7.557 194.722, -13.487 190.943, -19.36 186.348, -25.156 180.959, -30.853 174.802, -36.429 167.906, -41.861 160.305, -47.129 152.037, -52.214 143.146, -57.096 133.681, -61.758 123.693, -66.184 113.237, -70.358 102.369, -74.265 91.149, -77.89 79.64, -81.221 67.904, -84.242 55.99, -86.944 43.951, -89.316 31.838, -91.349 19.703, -93.035 7.595, -94.365 -4.448, -95.334 -16.418, -95.936 -28.355, -96.167 -40.214, -96.023 -52.038, -95.503 -63.773, -94.606 -75.366, -93.332 -86.761, -91.682 -97.901, -89.656 -108.725, -87.257 -119.174, -84.487 -129.189, -81.35 -138.714, -77.849 -147.693, -73.992 -156.072, -69.785 -163.799, -65.24 -170.824, -60.366 -177.1, -55.178 -182.58, -49.689 -187.222, -43.918 -190.984, -37.882 -193.83, -31.605 -195.724, -25.113 -196.642, -18.431 -196.562, -11.587 -195.474, -4.608 -193.374);
+}
+#introsection div .octagonTag svg {
+  transform: scale(2);
+}
+#introsection ul {
+  color: white;
+  list-style: none;
+  font-size: 3.157em;
+  font-family: "BakBakOne";
+}
+
+#videointrosection {
+  margin-top: 20vh;
+  color: white;
+  background: rgb(125, 202, 240);
+  background: linear-gradient(177deg, rgb(125, 202, 240) 0%, rgb(194, 245, 255) 0%, rgb(145, 147, 236) 0%, rgb(172, 214, 225) 100%);
+  display: flex;
+  padding: 10vh 20vw;
+}
+#videointrosection video {
+  width: 40%;
+  border-radius: 20px;
+}
+
+#loading {
+  z-index: 10;
+  background-color: #EDF2FB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#loading .quote {
+  font-family: "Roboto";
+  letter-spacing: 3px;
+}
+#loading .img {
+  width: 20vw;
+  height: 20vw;
+  background-image: url(./assets/workingmen.png);
+  background-size: cover;
+  background-position: center;
+}
+#loading .loadingText {
+  position: relative;
+  display: flex;
+}
+#loading .loadingText .point {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(70px);
+  }
+  50% {
+    transform: translateY(60px); /* Adjust the bounce height as needed */
+  }
+}
+#loading .point:nth-child(2) {
+  animation: bounce 1s infinite 0.1s alternate;
+}
+#loading .point:nth-child(3) {
+  animation: bounce 1s infinite 0.2s alternate;
+}
+#loading .point:nth-child(4) {
+  animation: bounce 1s infinite 0.3s alternate;
+}
+#loading h1 {
+  letter-spacing: 10px;
+}
+
+#summary {
+  height: calc(50px + 20vh);
+  background: #E2EAFC;
+  display: flex;
+  padding: 10px;
+  border-radius: 20px;
+  gap: 5px;
+  cursor: pointer;
+}
+#summary div {
+  background-color: #D7E3FC;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.333em;
+  font-family: "BakBakOne";
+  letter-spacing: 2px;
+  transition: all ease 200ms;
+}
+#summary .selectedSummary {
+  border: 2px solid #1b1d22;
+  background-color: #ABC4FF;
+  color: white;
+}
+
+.pageTransitioner {
+  overflow: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 100%;
+  border-radius: 500px;
+  background: #CCDBFD; /* Make sure b.$blue-7 is a valid color variable or replace it with a valid color value */
+  transition: all ease 500ms; /* Add property name 'left' before ease */
+  z-index: 3;
+}
+
+.pageTransitionerSlideIn {
+  left: -30%; /* Remove 'px' unit from 0 */
+}
+
+.pageTransitionerSlideOut {
+  left: 100%; /* Add missing semicolon and remove 'px' unit from 100% */
+}
+
+.Exerciseboxcontainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3%;
+}
+.Exerciseboxcontainer .ExerciseBoxBoxContainer {
+  width: fit-content;
+}
+
+.Exercisebox:hover .Exerciseboxsubgsection {
+  bottom: 0%;
+  background-color: #1b1d22;
+  color: white;
+}
+.Exercisebox:hover .Exerciseboxsubgsection svg {
+  stroke: white;
+}
+
+.Exercisebox {
+  animation: slideDown ease 200ms;
+  cursor: pointer;
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(181, 202, 247) 100%);
+  width: calc(15vmax + 8em);
+  margin: 1em;
+  min-height: 20vh;
+  height: fit-content;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.1);
+  transition: all ease 200ms;
+}
+.Exercisebox .Exerciseboxsubgsection {
+  transition: all ease 200ms;
+  position: absolute;
+  bottom: 0%;
+  background-color: #fdfdfd;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+.Exercisebox .Exerciseboxsubgsection svg {
+  stroke: #1b1d22;
+  transition: all ease 200ms;
+}
+
+.Exerciseboxopen {
+  height: 60vh;
+  width: 100%;
+}
+.Exerciseboxopen .Exerciseboxsubgsection {
+  height: 0%;
+}
+.Exerciseboxopen .Exerciseboxsubgsection h3, .Exerciseboxopen .Exerciseboxsubgsection svg {
+  opacity: 0;
+}
+
+.Exercisesettings {
+  height: 100%;
+  width: 90vmin;
+}
+.Exercisesettings h1 {
+  padding-top: 5%;
+  text-align: center;
+}
+.Exercisesettings .Exercisesettingschoices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 50%;
+  align-items: center;
+}
+.Exercisesettings .Exercisesettingschoices div {
+  transition: all ease 200ms;
+  border: 2px solid rgba(0, 0, 0, 0);
+  width: 20%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0;
+  border-radius: 20px;
+}
+.Exercisesettings .Exercisesettingschoices div svg {
+  height: 4em;
+  width: 4em;
+}
+.Exercisesettings .Exercisesettingschoices div:hover {
+  border: 2px solid black;
+  transform: scale(1.1);
+}
+.Exercisesettings .Exercisesettingschoices .Exercisesettingschoiceselected {
+  border: 2px solid black;
+}
+.Exercisesettings .Exercisesettingschoices .Exercisesettingschoicenotselected {
+  width: 0;
+  overflow: hidden;
+}
+.Exercisesettings .Exercisesettingschoices .Exercisesettingsthemeinput {
+  animation: slideDown ease 200ms;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80%;
+  padding-left: 2%;
+}
+.Exercisesettings .Exercisesettingschoices .Exercisesettingsthemeinput textarea {
+  height: 100%;
+  border-radius: 20px;
+  background-color: inherit;
+  font-family: Inter;
+  text-align: center;
+  font-size: 1.333em;
+}
+.Exercisesettings .Exercisesettingspassbutton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Exercisesettings .Exercisesettingspassbutton svg {
+  width: 4em;
+  height: 4em;
+}
+.Exercisesettings .Exercisesettingspassbutton path {
+  transition: all ease 200ms;
+}
+.Exercisesettings .Exercisesettingspassbuttonon {
+  transition: all ease 200ms;
+}
+.Exercisesettings .Exercisesettingspassbuttonon path {
+  fill: #1b1d22;
+}
+.Exercisesettings .Exercisesettingspassbuttonon:hover {
+  transform: translateX(20px);
+}
+.Exercisesettings .Exercisesettingspassbuttonoff path {
+  fill: white;
+}
+.Exercisesettings .Exercisesettingsplaybutton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Exercisesettings .Exercisesettingsplaybutton svg {
+  transition: all ease 200ms;
+  width: 3em;
+  height: 3em;
+}
+.Exercisesettings .Exercisesettingsplaybutton path {
+  transition: all ease 200ms;
+}
+.Exercisesettings .Exercisesettingsplaybuttonon {
+  transition: all ease 200ms;
+}
+.Exercisesettings .Exercisesettingsplaybuttonon svg {
+  background-color: #1b1d22;
+  padding: 1% 10%;
+  border-radius: 20px;
+}
+.Exercisesettings .Exercisesettingsplaybuttonon path {
+  fill: white;
+}
+.Exercisesettings .Exercisesettingsplaybuttonon:hover {
+  transform: scale(1.05);
+}
+.Exercisesettings .Exercisesettingsplaybuttonon:hover svg {
+  background-color: black;
+}
+.Exercisesettings .Exercisesettingsplaybuttonoff svg {
+  background-color: rgb(230, 230, 230);
+  padding: 1% 10%;
+  border-radius: 20px;
+}
+.Exercisesettings .Exercisesettingsplaybuttonoff path {
+  fill: rgb(255, 255, 255);
+}
+
+.trainQuestion {
+  animation: slideDown ease 1 200ms;
+  margin-top: 2vh;
+  margin-bottom: 10vh;
+  padding-bottom: 2vh;
+  border: solid 2px #1b1d22;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  z-index: 1;
+}
+.trainQuestion h1 {
+  text-align: left;
+  align-self: flex-start;
+}
+.trainQuestion .question {
+  position: relative;
+  transition: all ease 1s;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.trainQuestion .question div p {
+  animation: slideDown ease 200ms;
+}
+.trainQuestion .question .wrongQCManswer {
+  color: red;
+  text-decoration: line-through;
+  transition: all ease 1s;
+}
+.trainQuestion .question .goodQCManswer {
+  color: lime;
+  transition: all ease 1s;
+}
+.trainQuestion #hint {
+  animation: slideRight ease 200ms 1;
+  padding: 20px;
+  position: absolute;
+  height: fit-content;
+  width: 20%;
+  top: 0;
+  right: 0%;
+  border-radius: 25px;
+  border: #1b1d22 1px solid;
+  transition: all ease 300ms;
+  z-index: 2;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.trainQuestion #hint.active {
+  opacity: 1;
+}
+.trainQuestion #hint.inactive {
+  opacity: 0;
+}
+.trainQuestion #hint button {
+  background-color: #C1D3FE;
+}
+
+.settingsIcon {
+  height: 3em;
+  width: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b1d22;
+  color: white;
+  border-radius: 15px;
+  margin-left: 0.5vw;
+}
+.settingsIcon svg {
+  width: calc(1em + 1vw);
+  height: calc(1em + 1vw);
+}
+
+.settings {
+  margin-top: 1vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #EDF2FB;
+  height: fit-content;
+  padding: 0.7em;
+  border-radius: 15px;
+  letter-spacing: 3px;
+  animation: slideDown ease 1 200ms;
+}
+.settings label p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: all ease 300ms;
+}
+.settings label select {
+  background-color: inherit;
+  border: black 1px solid;
+  padding: calc(0.5em + 0.5vw);
+  border-radius: 15px;
+  font-family: "Roboto";
+  letter-spacing: inherit;
+}
+
+.normalSizeChat {
+  width: calc(250px + 5vw);
+}
+
+.extendedSizeChat {
+  width: 60vw;
+}
+
+#coursebot {
+  font-size: 1em;
+  position: fixed;
+  bottom: 4em;
+  right: calc(-20vw + 4em);
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vw;
+  border-radius: 20px;
+  transition: all ease 200ms;
+}
+#coursebot div:nth-child(1) div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+#coursebot div:nth-child(1) div:nth-child(1) svg {
+  color: #EDF2FB;
+  transition: all ease 200ms;
+}
+#coursebot div:nth-child(1) div:nth-child(1) svg:hover {
+  color: #C1D3FE;
+}
+#coursebot div:nth-child(1) div:nth-child(1) svg:nth-child(1) {
+  width: 2em;
+  height: 2em;
+  transform: rotate(45deg);
+}
+#coursebot div:nth-child(1) div:nth-child(1) svg:nth-child(1):hover {
+  transform: rotate(-135deg);
+}
+#coursebot div:nth-child(1) div:nth-child(1) .rotateExtendButton {
+  rotate: 180deg;
+}
+#coursebot div:nth-child(1) div:nth-child(1) svg:nth-child(2) {
+  width: 3em;
+  height: 3em;
+}
+#coursebot div:nth-child(1) div:nth-child(1) svg:nth-child(2):hover {
+  transform: rotate(12deg);
+}
+#coursebot div:nth-child(1) div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#coursebot div:nth-child(1) div:nth-child(2) svg {
+  height: 5em;
+  width: 5em;
+  color: #EDF2FB;
+}
+#coursebot .assistantChat::-webkit-scrollbar {
+  width: 10px;
+}
+#coursebot .assistantChat::-webkit-scrollbar-thumb {
+  background: #ebebeb;
+  border-radius: 20px;
+}
+#coursebot .assistantChat {
+  max-height: 60vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+#coursebot .assistantChat .leftChat {
+  background-color: #F9F9F9;
+  padding: 1em;
+  border-radius: 20px;
+}
+#coursebot .assistantChat .rightChat {
+  font-family: InterBold;
+  text-align: end;
+}
+#coursebot .assistantChat form {
+  display: flex;
+  justify-content: space-between;
+}
+#coursebot .assistantChat form input {
+  height: 5vh;
+  width: auto;
+  border: none;
+  padding: none;
+  background-color: inherit;
+  font-family: InterBold;
+}
+#coursebot .assistantChat form input:focus {
+  outline: none; /* Removes the default focus outline */
+}
+#coursebot .assistantChat form button {
+  border: solid 1px #1b1d22;
+  height: 5vh;
+  border-radius: 20px;
+  padding: none;
+  transition: all ease 200ms;
+}
+#coursebot .assistantChat form button:hover {
+  background-color: #1b1d22;
+  color: white;
+}
+
+.callAssistantButton {
+  width: 2em;
+  height: 2em;
+  padding: 0.5em;
+  color: #1b1d22;
+  border: 1px solid #1b1d22;
+  border-radius: 20px;
+  transform: translateY(40%);
+  margin-left: 2vw;
+  transition: all ease 200ms;
+  cursor: pointer;
+}
+
+.callAssistantButton:hover {
+  background-color: #1b1d22;
+  color: white;
+}
+
+.hamburgerMenuOff {
+  display: none;
+}
+
+.hamburgerMenuOn {
+  display: none;
+}
+
+/*# sourceMappingURL=index.css.map */

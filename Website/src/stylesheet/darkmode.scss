@@ -1,0 +1,58 @@
+@use "b";
+
+.warningBackground{
+    background-color: b.$black;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    
+}
+.backgroundColorWarning{
+    .closeButton {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        width: 2em;
+        height: 2em;
+        transition : all ease 200ms;
+        cursor: pointer;
+        
+    }
+    .closeButton:hover {
+        transform: rotate(12deg) scale(1.1);
+    }
+    div:nth-child(1){
+        background-color: b.$black;
+        width: 100%;
+        height: 20%;
+        @include b.center;
+        svg {
+            background-color: b.$black;
+            color: white;
+            width: 2em;
+            height: 2em;
+        }
+    }
+        p {
+            width: 30vw;
+            text-align: center;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 1;
+        z-index: 3;
+        color: black;
+        background-color: white;
+        position: fixed;
+        width: 40vw;
+        height: 70vh;
+        left: 25vw;
+        top: 15vh;
+        border-radius: 0 0 50px 50px;
+        transition: all ease 200ms;
+        animation: slideRight ease 800ms;
+}

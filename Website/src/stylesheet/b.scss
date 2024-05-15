@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+@font-face {
+    font-family: BakBakOne;
+    src: url(./assets/BakbakOne-Regular.ttf);
+  }
+@font-face {
+    font-family : Roboto;
+    src : url(./assets/Roboto-Regular.ttf)
+}
+@font-face {
+  font-family : Inter;
+  src : url(./assets/Inter-VariableFont_slnt,wght.ttf)
+}
+@font-face {
+  font-family : InterBold;
+  src : url(./assets/Inter-Bold.ttf)
+}
+
+@font-face {
+  font-family: InterExtraLight;
+  src: url(./assets/Inter-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: InterLight;
+  src: url(./assets/Inter-Light.ttf);
+}
+
+
+$space-around : 20vw;
+$mid-space : 60vw;
+
+strong {
+  font-family: InterBold;
+}
+
+$testcolor : lime;
+
+$blue-7 : #ABC4FF;
+$blue-6 : #B6CCFE;
+$blue-5 : #C1D3FE;
+$blue-4 : #CCDBFD;
+$blue-3 : #D7E3FC;
+$blue-2 : #E2EAFC;
+$blue-1 : #EDF2FB;
+
+$black : #1b1d22;
+$red : #A10000;
+
+$fontsize-1 : 0.75em;
+$fontsize-2 : 1em;
+$fontsize-3 : 1.333em ;
+$fontsize-4 : 2.1em ;
+$fontsize-5 : 3.157em ; 
+
+$boldfont : "BakBakOne";
+$titlefont : "Inter";
+$lightfont : "Roboto";
+
+$normalLetterSpacing : 3px;
+
+$breakpoint-phone: 480px;
+
+
+.blue1 {
+  color : $blue-1
+}
+.blue2 {
+  color : $blue-2
+}
+.blue3 {
+  color : $blue-3
+}
+.blue4 {
+  color : $blue-4
+}
+.blue5 {
+  color : $blue-5
+}
+.blue6 {
+  color : $blue-6;
+}
+.blue7 {
+  color : $blue-7
+}
+
+.button {
+  background-color: $black;
+  height: 3em;
+  color : white;
+  border-radius: 15px;
+  font-family: $boldfont;
+  padding: 0.5em 3em 0.5em 3em;
+  transition : ease all 300ms;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  background-color: $blue-1;
+  height: fit-content;
+  padding: 0.7em;
+  border-radius: 15px;
+  z-index: 2;
+}
+.input {
+  resize: vertical; /* Allow vertical resizing */
+  height: 3em;
+  width: 100%;
+  background-color:  inherit;
+  border: none;
+  font-family: $boldfont;
+  font-size: $fontsize-2;
+  letter-spacing: $normalLetterSpacing;
+  transition: height ease 300ms;
+  &.courseInput{
+    height: 12em;
+  }
+}
+
+.nametag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue-5;
+  color :white;
+  width: 10em;
+  transform: rotate(20deg);
+  border-radius: 20px;
+
+}
+
+.spaced {
+  margin-left: $space-around;
+  margin-right: $space-around;
+}
+
+.structure {
+  display: flex;
+  justify-content: space-between;
+  .structureleft {
+    margin-right: 5vw;
+  }
+}
+
+.line {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content : center;
+  div {
+    position: absolute;
+    top: -110px;
+    width: $mid-space;
+    height: 100px;
+    border-bottom: #2C3038 2px solid;
+
+  }
+}
+.courseline {
+  border-bottom: black 1px solid;
+}
+
+/*The code below is only for quote */
+.quote {
+  padding-left: 1vw;
+  font-weight: bolder;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid $black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+    typing 9s steps(40, end) infinite,
+    blink-caret .75s step-end infinite;
+}
+
+.PassButton {
+  background-color: #434853;
+  width: 60vmin;
+  border-radius: 20px;
+  height: 8vh;
+  color: $black;
+  div {
+    background-color: $blue-2;
+    height: 100%;
+    width: 50%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      rotate: 90deg;
+      width: 1.5em;
+    }
+    transition: all ease 300ms;
+  }
+  div:hover {
+    background-color: $blue-7;
+    div {
+      background-color: $blue-7;
+    }
+  }
+  
+  .PassButtonNext {
+    transform: translateX(100%);
+  }
+  
+}
+
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $black; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $black; }
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The slide Down animation effect */
+
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideRight{
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideUp{
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes nonExistent {
+  100%{
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes QCManswershowup {
+  0% {
+    opacity: 0;
+    right: 100%;
+  }
+  50% {
+    opacity: 0;
+    right: 100%;
+  }
+  100% {
+    opacity: 1;
+    right: 20%;
+  }
+}
+@keyframes QCMbeat {
+  0% {
+    transform: scale(1);
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: scale(1);
+
+  }
+}
+
+@keyframes QCMslideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes ResultPagePop {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(6deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes PopIn {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes StarPopIn {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  80% {
+    transform: scale(1.5) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes StarPopInColorChange {
+  0% {
+    fill: white;
+  }
+  80% {
+    fill:rgb(255, 220, 105); 
+  }
+  100% {
+    fill: white;
+  }
+}
+
+@keyframes ResultPagePopSubpage {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to an element */
+.result-page {
+  animation: ResultPagePop 0.3s ease-in-out;
+}
+
+
+@keyframes HintSlideIn {
+  
+  0% {
+    -webkit-filter: drop-shadow(0 0 30px #cab812);
+            filter: drop-shadow(0 0 30px #ddbe0e);
+            color: #e6dca8;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+        -webkit-filter: drop-shadow(0 0 30px #cab812);
+            filter: drop-shadow(0 0 30px #ddbe0e);
+            color: #e6dca8;
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 30px #cab812);
+            filter: drop-shadow(0 0 30px #ddbe0e);
+            color: #e6dca8;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.slideDown {
+  animation: slideDown ease 1 200ms ;
+}
+.slideRight {
+  animation: slideRight ease 1 200ms ;
+}
+.slideUp {
+  animation: slideUp ease 1 200ms ;
+}
+
+
+
